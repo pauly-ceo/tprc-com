@@ -503,14 +503,14 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero__rotation" id="heroRotation">
-    <video class="is-active" src="./web_wellness_sun_rays.mp4" autoplay muted loop playsinline preload="metadata"></video>
-    <video src="./web_zima_aerial_snowcaps.mp4" autoplay muted loop playsinline preload="metadata"></video>
-    <video src="./web_wellness_trees_fog.mp4" autoplay muted loop playsinline preload="metadata"></video>
-    <video src="./web_zima_breathtaking_range.mp4" autoplay muted loop playsinline preload="metadata"></video>
-    <video src="./web_croatia_primosten.mp4" autoplay muted loop playsinline preload="metadata"></video>
-    <video src="./web_wellness_sun_misty.mp4" autoplay muted loop playsinline preload="metadata"></video>
-    <video src="./web_zima_aerial_range.mp4" autoplay muted loop playsinline preload="metadata"></video>
-    <video src="./web_bali_sunset.mp4" autoplay muted loop playsinline preload="metadata"></video>
+    <video class="is-active" src="./web_wellness_sun_rays.mp4" autoplay muted loop playsinline webkit-playsinline="true" preload="auto"></video>
+    <video src="./web_zima_aerial_snowcaps.mp4" muted loop playsinline webkit-playsinline="true" preload="none"></video>
+    <video src="./web_wellness_trees_fog.mp4" muted loop playsinline webkit-playsinline="true" preload="none"></video>
+    <video src="./web_zima_breathtaking_range.mp4" muted loop playsinline webkit-playsinline="true" preload="none"></video>
+    <video src="./web_croatia_primosten.mp4" muted loop playsinline webkit-playsinline="true" preload="none"></video>
+    <video src="./web_wellness_sun_misty.mp4" muted loop playsinline webkit-playsinline="true" preload="none"></video>
+    <video src="./web_zima_aerial_range.mp4" muted loop playsinline webkit-playsinline="true" preload="none"></video>
+    <video src="./web_bali_sunset.mp4" muted loop playsinline webkit-playsinline="true" preload="none"></video>
   </div>
   <div class="hero__veil"></div>
   <div class="hero__inner">
@@ -851,15 +851,27 @@
   const heroH=()=>document.querySelector('.hero').offsetHeight-80;
   window.addEventListener('scroll',()=>{topbar.classList.toggle('solid',window.scrollY>heroH())},{passive:true});
 
-  // Hero video rotation: switch every 3.5s, fade
+  // Hero video rotation: switch every 4s, fade. Force-play on iOS Safari.
   (function(){
     const videos=document.querySelectorAll('#heroRotation video');
+    if(!videos.length) return;
+    // Kick the first video — autoplay alone is unreliable on iOS Safari
+    const kick=v=>{ try{ v.muted=true; const p=v.play(); if(p&&p.catch) p.catch(()=>{}); }catch(e){} };
+    kick(videos[0]);
+    // Backup: any user touch/scroll unblocks autoplay
+    const unlock=()=>{ kick(videos[0]); document.removeEventListener('touchstart',unlock); document.removeEventListener('scroll',unlock); };
+    document.addEventListener('touchstart',unlock,{passive:true,once:true});
+    document.addEventListener('scroll',unlock,{passive:true,once:true});
     let i=0;
     setInterval(()=>{
       videos[i].classList.remove('is-active');
       i=(i+1)%videos.length;
-      videos[i].classList.add('is-active');
-    },3500);
+      // Lazy-load next: set preload so it actually downloads, then play
+      const next=videos[i];
+      if(next.preload!=='auto'){ next.preload='auto'; next.load(); }
+      next.classList.add('is-active');
+      kick(next);
+    },4000);
   })();
 
   // Seasons loop (between Invest and Method): 4 videos, 4s each
