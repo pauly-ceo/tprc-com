@@ -14,15 +14,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="./Brother%20Signature.otf" as="font" type="font/otf" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-  /* Brother Signature — local */
+  /* Brother Signature — local. font-display:block = skryje text dokud font nedorazí (vyhne se FOUT swap) */
   @font-face{
     font-family:"Brother Signature";
     src:url("./Brother%20Signature.otf") format("opentype");
-    font-display:swap;
+    font-display:block;
   }
+  /* Hero wordmark — fade-in až po načtení fontu, ne hned na fallbacku */
+  .hero__wordmark{opacity:0;transition:opacity .35s ease-out}
+  html.fonts-ready .hero__wordmark{opacity:1}
 
   :root{
     --ink:#2A2620;
@@ -846,6 +850,21 @@
 </footer>
 
 <script>
+  // Font loading: signal until Brother Signature is loaded (vyhne se FOUT na hero wordmarku)
+  (function(){
+    const ready=()=>document.documentElement.classList.add('fonts-ready');
+    if(document.fonts && document.fonts.load){
+      Promise.all([
+        document.fonts.load('1em "Brother Signature"'),
+        document.fonts.load('100px "Brother Signature"')
+      ]).then(ready, ready);
+      // pojistka — pokud font po 2.5s nedorazí, ukaž stejně (fallback)
+      setTimeout(ready, 2500);
+    } else {
+      ready();
+    }
+  })();
+
   // Topbar solid on scroll
   const topbar=document.getElementById('topbar');
   const heroH=()=>document.querySelector('.hero').offsetHeight-80;
