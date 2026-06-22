@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&family=Mona+Sans:ital,wdth,wght@0,75..125,100..900&display=swap" rel="stylesheet">
 <link rel="preload" as="video" href="hero.mp4" type="video/mp4">
 <link rel="preload" as="image" href="hero02.jpg">
 <style>
@@ -101,34 +101,46 @@ a{color:inherit;text-decoration:none}
   pointer-events:none;
 }
 
-/* Wordmark — massive stacked logo */
+/* Wordmark — massive stacked logo (Druk Wide Super inspired, via Mona Sans wdth 125) */
 .hero__mark{
   position:relative;z-index:3;
-  display:inline-block;
+  display:block;
   color:#fff;
-  font-family:'Inter',sans-serif;
+  font-family:'Mona Sans','Inter',sans-serif;
   font-weight:900;
+  font-stretch:125%;          /* variable wdth — pushes to max wide */
+  font-variation-settings:"wdth" 125, "wght" 900;
   text-transform:uppercase;
-  line-height:0.86;
-  letter-spacing:-0.04em;
-  font-stretch:expanded;
+  line-height:0.82;
+  letter-spacing:-0.035em;
   text-align:left;
-  padding:0 6vw;
+  padding:0 5vw;
   width:100%;
-  max-width:1320px;
+  max-width:1280px;
   margin:0 auto;
-  font-size:clamp(58px, 13vw, 220px);
+  font-size:clamp(56px, 14vw, 240px);
 }
-.hero__mark span{display:block;white-space:nowrap}
-.hero__mark .row-the{font-size:0.55em}
-.hero__mark .row-rs{position:relative;display:inline-block}
-.hero__mark .tm{
-  font-size:0.18em;
-  font-weight:700;
-  letter-spacing:0;
-  vertical-align:0.42em;
-  margin-left:0.18em;
+.hero__mark .row{
+  display:block;
+  white-space:nowrap;
+}
+/* THE — narrower row (3 chars only); slight scale-down so block stays aligned */
+.hero__mark .row-the{font-size:0.62em;line-height:0.85}
+.hero__mark .row-rs{
+  position:relative;
   display:inline-block;
+}
+.hero__mark .tm{
+  font-family:'Mona Sans','Inter',sans-serif;
+  font-weight:900;
+  font-stretch:125%;
+  font-variation-settings:"wdth" 125, "wght" 900;
+  font-size:0.28em;
+  letter-spacing:-0.02em;
+  vertical-align:0.62em;
+  margin-left:0.22em;
+  display:inline-block;
+  line-height:1;
 }
 
 /* Hero meta footer */
@@ -434,10 +446,10 @@ body.menu-open{overflow:hidden}
   <div class="hero__vignette"></div>
 
   <h1 class="hero__mark" aria-label="The Personal Resorts (TM) Company">
-    <span class="row-the">The</span>
-    <span>Personal</span>
-    <span class="row-rs">Resorts<sup class="tm">&trade;</sup></span>
-    <span>Company</span>
+    <span class="row row-the">The</span>
+    <span class="row">Personal</span>
+    <span class="row row-rs">Resorts<span class="tm">&trade;</span></span>
+    <span class="row">Company</span>
   </h1>
 
   <div class="hero__meta">
