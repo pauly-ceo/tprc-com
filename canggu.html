@@ -1,0 +1,1802 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Ananta Canggu — The Personal Resort Company™</title>
+<meta name="description" content="Ananta Canggu — 36 design-led residences at Padang Linjong, Canggu, Bali. Designed by Studio Identity Designers, built by THIERRA, operated by The Personal Resort Company. Keys Q2 2028." />
+<meta name="theme-color" content="#0A0A0A" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   THE PERSONAL RESORT COMPANY — ANANTA CANGGU DETAIL
+   v1 / Welltower-inspired institutional B/W
+   ============================================================ */
+
+:root{
+  --ink:#0A0A0A;
+  --paper:#FFFFFF;
+  --gray:#7A7A7A;
+  --gray-soft:#A8A8A8;
+  --line:#E5E5E5;
+  --line-strong:#0A0A0A;
+  --live:#D9342B;
+
+  --max:1320px;
+  --pad-x: clamp(20px, 4vw, 56px);
+
+  --t-display: 'Inter', system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --t-body: 'Inter', system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);}
+body{
+  font-family:var(--t-body);
+  font-weight:400;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--pad-x)}
+
+/* ------------------------------------------------------------
+   TOP NAV
+------------------------------------------------------------ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(140%) blur(10px);
+  -webkit-backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+  padding:0 var(--pad-x);
+  max-width:var(--max);margin:0 auto;
+}
+.nav-left{display:flex;align-items:center;gap:28px}
+.nav-logo{
+  font-family:var(--t-display);
+  font-weight:900;
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  line-height:1.05;
+  color:var(--ink);
+}
+.nav-logo small{font-size:8px;vertical-align:super;letter-spacing:.05em}
+.nav-back{
+  font-family:var(--t-display);
+  font-weight:700;
+  font-size:10.5px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gray);
+  border-left:1px solid var(--line);
+  padding-left:28px;
+}
+.nav-back:hover{color:var(--ink)}
+.nav-links{
+  display:flex;align-items:center;gap:32px;
+  font-family:var(--t-display);
+  font-weight:700;
+  font-size:11.5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.nav-links a{position:relative;padding:6px 0}
+.nav-links a:hover{color:var(--gray)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--ink);
+  padding:9px 14px;
+  font-family:var(--t-display);
+  font-weight:700;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  transition:background .2s,color .2s;
+}
+.nav-cta:hover{background:var(--ink);color:var(--paper)}
+.nav-burger{display:none;width:28px;height:28px;flex-direction:column;justify-content:center;gap:6px}
+.nav-burger span{display:block;height:1.5px;background:var(--ink)}
+
+@media (max-width:1000px){
+  .nav-links{display:none}
+}
+@media (max-width:700px){
+  .nav-cta{display:none}
+  .nav-burger{display:flex}
+  .nav-back{padding-left:16px;border-left:0}
+}
+
+/* ------------------------------------------------------------
+   HERO — pure typography (4-line stacked wordmark)
+------------------------------------------------------------ */
+.hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  position:relative;
+  padding:120px var(--pad-x) 80px;
+  background:var(--paper);
+}
+.hero-eyebrow{
+  position:absolute;top:96px;left:var(--pad-x);
+  font-family:var(--t-display);font-weight:700;
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gray);
+}
+.hero-eyebrow .dot{
+  display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--live);margin-right:8px;vertical-align:middle;
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+.hero-meta-right{
+  position:absolute;top:96px;right:var(--pad-x);
+  font-family:var(--t-display);font-weight:500;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gray);text-align:right;line-height:1.7;
+}
+
+.wordmark{
+  font-family:var(--t-display);
+  font-weight:900;
+  font-size:clamp(60px, 13.5vw, 160px);
+  line-height:.85;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+  text-align:center;
+  color:var(--ink);
+  margin:0;
+}
+.wordmark div{display:block}
+
+.hero-tagline{
+  margin-top:36px;
+  font-family:var(--t-display);
+  font-weight:700;
+  font-size:clamp(11px,1.1vw,13px);
+  letter-spacing:.22em;
+  color:var(--gray);
+  text-align:center;
+  text-transform:uppercase;
+}
+
+.hero-status{
+  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
+  display:inline-flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.92);
+  border:1px solid var(--ink);
+  padding:10px 16px;
+  font-family:var(--t-display);font-weight:700;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  white-space:nowrap;
+}
+.hero-status .dot{
+  display:inline-block;width:8px;height:8px;border-radius:50%;
+  background:var(--live);flex-shrink:0;
+  animation:pulse 2.4s ease-in-out infinite;
+}
+
+@media (max-width:600px){
+  .hero-eyebrow,.hero-meta-right{position:static;text-align:left;margin-bottom:12px}
+  .hero-meta-right{margin-top:6px}
+  .hero{padding-top:96px}
+  .hero-status{font-size:9px;letter-spacing:.14em;padding:8px 12px;white-space:normal;text-align:center;max-width:90%;line-height:1.5}
+}
+
+/* ------------------------------------------------------------
+   SECTION SKELETON
+------------------------------------------------------------ */
+.section{padding:120px var(--pad-x);border-top:1px solid var(--line)}
+.section--dark{background:var(--ink);color:var(--paper);border-color:#1a1a1a}
+.section--dark .label,
+.section--dark .stat-label,
+.section--dark .small{color:var(--gray-soft)}
+.section--tight{padding:80px var(--pad-x)}
+
+.label{
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gray);
+}
+
+.h-display{
+  font-family:var(--t-display);
+  font-weight:900;
+  font-size:clamp(36px,5.4vw,72px);
+  line-height:1.02;
+  letter-spacing:-.02em;
+  margin:18px 0 0;
+}
+.h-medium{
+  font-family:var(--t-display);
+  font-weight:900;
+  font-size:clamp(24px,3vw,40px);
+  line-height:1.08;
+  letter-spacing:-.015em;
+}
+
+.body-lg{font-size:17px;line-height:1.6;color:#222}
+.section--dark .body-lg{color:#d9d9d9}
+
+.arrow-link{
+  display:inline-flex;align-items:center;gap:10px;
+  border-bottom:1px solid var(--ink);
+  padding:6px 0;
+  font-family:var(--t-display);font-weight:700;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+}
+.section--dark .arrow-link{border-color:var(--paper)}
+.arrow-link::after{content:"→";font-size:14px}
+
+/* ------------------------------------------------------------
+   HEADLINE BLOCK — 2 col
+------------------------------------------------------------ */
+.headline-grid{
+  display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;
+  max-width:var(--max);margin:0 auto;
+}
+.headline-grid .right p{margin:0 0 22px}
+@media (max-width:900px){
+  .headline-grid{grid-template-columns:1fr;gap:36px}
+}
+
+/* ------------------------------------------------------------
+   STATS STRIP (dark)
+------------------------------------------------------------ */
+.stats{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+  max-width:var(--max);margin:0 auto;
+}
+.stat{
+  padding:0 28px;
+  border-left:1px solid #2a2a2a;
+}
+.stat:first-child{padding-left:0;border-left:0}
+.stat-num{
+  font-family:var(--t-display);font-weight:900;
+  font-size:clamp(40px,5.4vw,72px);
+  line-height:1;letter-spacing:-.03em;
+  color:var(--paper);
+}
+.stat-label{
+  margin-top:14px;
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gray-soft);
+  line-height:1.4;
+}
+@media (max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr);gap:40px 24px}
+  .stat{padding:0;border-left:0}
+}
+@media (max-width:480px){
+  .stats{grid-template-columns:1fr}
+}
+
+/* ------------------------------------------------------------
+   FULL-BLEED PHOTO
+------------------------------------------------------------ */
+.fullbleed{
+  position:relative;width:100%;
+  aspect-ratio: 16 / 9;
+  background:#1a1a1a;overflow:hidden;
+  border-top:1px solid var(--line);
+}
+.fullbleed img{
+  width:100%;height:100%;object-fit:cover;
+  filter:grayscale(100%) contrast(1.08);
+}
+.fullbleed-caption{
+  position:absolute;left:var(--pad-x);bottom:28px;
+  color:var(--paper);
+  background:rgba(0,0,0,.55);
+  padding:8px 14px;
+  font-family:var(--t-display);font-weight:700;
+  font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+}
+
+/* ------------------------------------------------------------
+   ARCHITECTURE — 2 col text + 3 photo strip
+------------------------------------------------------------ */
+.arch-grid{
+  display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;
+  max-width:var(--max);margin:0 auto;
+}
+.arch-grid .right p{margin:0 0 22px}
+.photo-strip{
+  margin-top:64px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  max-width:var(--max);margin-left:auto;margin-right:auto;
+}
+.photo-strip .scene{
+  aspect-ratio:4 / 3;background:#1a1a1a;overflow:hidden;
+}
+.photo-strip .scene img{
+  width:100%;height:100%;object-fit:cover;
+  filter:grayscale(100%) contrast(1.08);
+}
+@media (max-width:900px){
+  .arch-grid{grid-template-columns:1fr;gap:36px}
+  .photo-strip{grid-template-columns:1fr;gap:14px}
+}
+
+/* ------------------------------------------------------------
+   SIGNATURE ELEMENTS (6 grid)
+------------------------------------------------------------ */
+.sig-head{margin-bottom:56px;max-width:var(--max);margin-left:auto;margin-right:auto}
+.sig-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--line);border-left:1px solid var(--line);
+  max-width:var(--max);margin:0 auto;
+}
+.sig-item{
+  padding:36px 32px 40px;
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.sig-num{
+  font-family:var(--t-display);font-weight:900;
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);
+}
+.sig-title{
+  margin:14px 0 14px;
+  font-family:var(--t-display);font-weight:900;
+  font-size:18px;letter-spacing:-.005em;text-transform:uppercase;line-height:1.15;
+}
+.sig-body{font-size:14px;line-height:1.6;color:#333;margin:0}
+@media (max-width:900px){
+  .sig-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .sig-grid{grid-template-columns:1fr}
+}
+
+/* ------------------------------------------------------------
+   UNIT TYPES (3-col cards)
+------------------------------------------------------------ */
+.unit-head{margin-bottom:56px;max-width:var(--max);margin-left:auto;margin-right:auto}
+.unit-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  max-width:var(--max);margin:0 auto;
+}
+.unit-card{
+  border:1px solid var(--ink);
+  padding:36px 32px 40px;
+  background:var(--paper);
+  display:flex;flex-direction:column;
+}
+.unit-eyebrow{
+  font-family:var(--t-display);font-weight:900;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gray);
+}
+.unit-title{
+  margin:14px 0 28px;
+  font-family:var(--t-display);font-weight:900;
+  font-size:26px;letter-spacing:-.01em;text-transform:uppercase;line-height:1.1;
+}
+.unit-bullets{
+  list-style:none;padding:0;margin:0 0 36px;
+  display:flex;flex-direction:column;gap:12px;
+  border-top:1px solid var(--line);padding-top:24px;
+}
+.unit-bullets li{
+  display:flex;justify-content:space-between;gap:16px;
+  font-family:var(--t-display);font-weight:500;
+  font-size:13.5px;color:#222;line-height:1.5;
+}
+.unit-bullets li .l{
+  font-weight:700;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);
+  white-space:nowrap;
+}
+.unit-from{
+  margin-top:auto;
+  padding-top:24px;border-top:1px solid var(--line);
+}
+.unit-from .l{
+  font-family:var(--t-display);font-weight:700;
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);
+}
+.unit-from .v{
+  font-family:var(--t-display);font-weight:900;
+  font-size:36px;letter-spacing:-.02em;line-height:1;
+  margin-top:8px;
+}
+@media (max-width:900px){
+  .unit-grid{grid-template-columns:1fr;gap:18px}
+}
+
+/* ------------------------------------------------------------
+   FLOOR PLAN
+------------------------------------------------------------ */
+.floor-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px}
+.floor-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  max-width:var(--max);margin:0 auto;
+}
+.floor-card{border:1px solid var(--line);padding:32px 28px}
+.floor-card-head{
+  display:flex;justify-content:space-between;align-items:baseline;gap:24px;
+  margin-bottom:24px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--line);
+}
+.floor-card-name{
+  font-family:var(--t-display);font-weight:900;
+  font-size:20px;letter-spacing:-.005em;text-transform:uppercase;
+}
+.floor-card-area{
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gray);
+  text-align:right;
+}
+.floor-card-area strong{display:block;color:var(--ink);font-size:14px;font-weight:900;letter-spacing:.04em;margin-bottom:4px}
+.floor-svg-wrap{
+  width:100%;aspect-ratio:5 / 4;background:#fafafa;
+  display:flex;align-items:center;justify-content:center;
+}
+.floor-svg-wrap svg{width:92%;height:92%;display:block}
+.floor-legend{
+  margin-top:18px;
+  font-family:var(--t-display);font-weight:500;
+  font-size:11.5px;letter-spacing:.05em;
+  color:var(--gray);
+  line-height:1.7;
+}
+.floor-legend span{display:inline-block;margin-right:14px}
+@media (max-width:900px){
+  .floor-grid{grid-template-columns:1fr;gap:32px}
+  .floor-head{flex-direction:column;align-items:flex-start;gap:14px}
+}
+
+/* ------------------------------------------------------------
+   LOCATION
+------------------------------------------------------------ */
+.loc-head{margin-bottom:48px;max-width:var(--max);margin-left:auto;margin-right:auto}
+.loc-facts{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  max-width:var(--max);margin:0 auto 48px;
+}
+.loc-fact{padding:28px 24px;border-left:1px solid var(--line)}
+.loc-fact:first-child{border-left:0}
+.loc-fact-n{
+  font-family:var(--t-display);font-weight:900;
+  font-size:clamp(28px,3.4vw,42px);
+  letter-spacing:-.02em;line-height:1;
+}
+.loc-fact-l{
+  margin-top:10px;
+  font-family:var(--t-display);font-weight:700;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);
+}
+.loc-body{
+  max-width:760px;margin:0 auto;
+  font-size:16.5px;line-height:1.7;color:#222;
+}
+.loc-body p{margin:0 0 22px}
+.loc-map{
+  margin-top:36px;
+  display:inline-flex;align-items:center;gap:10px;
+  border-bottom:1px solid var(--ink);padding:6px 0;
+  font-family:var(--t-display);font-weight:700;
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+}
+.loc-map::after{content:"↗";margin-left:4px}
+@media (max-width:900px){
+  .loc-facts{grid-template-columns:repeat(2,1fr)}
+  .loc-fact:nth-child(3){border-left:0}
+}
+@media (max-width:480px){
+  .loc-facts{grid-template-columns:1fr}
+  .loc-fact{border-left:0;border-bottom:1px solid var(--line)}
+  .loc-fact:last-child{border-bottom:0}
+}
+
+/* ------------------------------------------------------------
+   TIMELINE — 6-step horizontal milestone bar
+------------------------------------------------------------ */
+.time-head{margin-bottom:56px;max-width:var(--max);margin-left:auto;margin-right:auto}
+.time-track{
+  position:relative;max-width:var(--max);margin:0 auto;
+  padding-top:14px;
+}
+.time-track::before{
+  content:"";position:absolute;left:0;right:0;top:50px;
+  height:1px;background:var(--ink);
+  z-index:0;
+}
+.time-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:14px;
+  position:relative;z-index:1;
+}
+.time-step{
+  border:1px solid var(--ink);
+  background:var(--paper);
+  padding:18px 16px 20px;
+  display:flex;flex-direction:column;
+  min-height:128px;
+}
+.time-q{
+  font-family:var(--t-display);font-weight:900;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  padding-bottom:10px;
+  margin-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+.time-desc{
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.06em;line-height:1.4;
+  color:var(--ink);
+}
+.time-desc small{
+  display:block;margin-top:6px;
+  font-weight:500;font-size:10px;color:var(--gray);letter-spacing:.04em;text-transform:none;
+}
+@media (max-width:900px){
+  .time-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .time-track::before{display:none}
+}
+@media (max-width:520px){
+  .time-grid{grid-template-columns:1fr}
+}
+
+/* ------------------------------------------------------------
+   INVESTMENT — ROI table
+------------------------------------------------------------ */
+.inv-head{
+  display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:end;
+  margin-bottom:56px;max-width:var(--max);margin-left:auto;margin-right:auto;
+}
+.inv-head p{margin:0;font-size:16px;line-height:1.65;color:#222}
+.roi-wrap{max-width:var(--max);margin:0 auto;overflow-x:auto}
+.roi-table{
+  width:100%;border-collapse:collapse;
+  font-family:var(--t-display);
+}
+.roi-table th,
+.roi-table td{
+  padding:18px 16px;
+  text-align:right;
+  font-weight:500;
+  font-size:14px;
+  border-bottom:1px solid var(--line);
+  white-space:nowrap;
+}
+.roi-table th:first-child,
+.roi-table td:first-child{
+  text-align:left;
+  font-weight:700;
+  letter-spacing:.04em;
+  color:#222;
+  white-space:normal;
+}
+.roi-table thead th{
+  padding-top:0;padding-bottom:18px;
+  border-bottom:2px solid var(--ink);
+  font-weight:900;
+  font-size:11.5px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+.roi-table thead th:first-child{
+  font-size:11px;
+  color:var(--gray);
+  letter-spacing:.18em;
+  font-weight:700;
+}
+.roi-table tbody td{font-variant-numeric:tabular-nums}
+.roi-table tbody tr td:nth-child(2){font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.roi-table .row-emph td{
+  border-top:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  font-weight:900;
+  font-size:15px;
+}
+.roi-caption{
+  margin-top:24px;
+  font-size:12.5px;line-height:1.6;color:var(--gray);
+  max-width:760px;
+}
+
+/* Illustrative example — 2 col */
+.ill-wrap{
+  margin-top:64px;max-width:var(--max);margin-left:auto;margin-right:auto;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+  padding:36px 0;
+}
+.ill-head{margin-bottom:28px}
+.ill-grid{
+  display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;
+}
+.ill-lines{display:flex;flex-direction:column;gap:14px}
+.ill-line{
+  display:flex;justify-content:space-between;align-items:baseline;gap:24px;
+  font-family:var(--t-display);
+  padding-bottom:12px;border-bottom:1px solid var(--line);
+}
+.ill-line:last-child{border-bottom:0}
+.ill-line .l{font-weight:500;font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:.12em}
+.ill-line .v{font-weight:700;font-size:16px;color:var(--ink);font-variant-numeric:tabular-nums}
+.ill-line.sub .v{color:#7A7A7A;font-weight:500}
+.ill-net{
+  text-align:right;
+}
+.ill-net .l{
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);
+}
+.ill-net .n{
+  font-family:var(--t-display);font-weight:900;
+  font-size:clamp(48px,5vw,72px);
+  line-height:1;letter-spacing:-.03em;
+  margin:10px 0 18px;
+  font-variant-numeric:tabular-nums;
+}
+.ill-net .k{
+  display:flex;justify-content:flex-end;gap:24px;flex-wrap:wrap;
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+}
+.ill-net .k span{border-left:1px solid var(--line);padding-left:24px}
+.ill-net .k span:first-child{border-left:0;padding-left:0}
+@media (max-width:900px){
+  .ill-grid{grid-template-columns:1fr;gap:32px}
+  .ill-net{text-align:left}
+  .ill-net .k{justify-content:flex-start}
+}
+
+/* 4-phase pricing table */
+.phase-wrap{margin-top:80px;max-width:var(--max);margin-left:auto;margin-right:auto;overflow-x:auto}
+.phase-head{margin-bottom:28px}
+.phase-table{
+  width:100%;border-collapse:collapse;font-family:var(--t-display);
+}
+.phase-table th,
+.phase-table td{
+  padding:18px 14px;
+  text-align:right;
+  font-weight:500;font-size:14px;
+  border-bottom:1px solid var(--line);
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+.phase-table th:first-child,
+.phase-table td:first-child{
+  text-align:left;font-weight:700;letter-spacing:.04em;white-space:normal;
+}
+.phase-table th:nth-child(2),
+.phase-table td:nth-child(2){text-align:left}
+.phase-table thead th{
+  padding-top:0;padding-bottom:16px;
+  border-bottom:2px solid var(--ink);
+  font-weight:900;font-size:11px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink);
+}
+.phase-table thead th:first-child{color:var(--gray);font-weight:700}
+.phase-table .vip td{
+  border-top:2px solid var(--ink);
+  border-bottom:2px solid var(--ink);
+  font-weight:700;
+}
+.phase-table .vip td:first-child .red{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--live);margin-right:10px;vertical-align:middle;
+}
+.phase-caption{
+  margin-top:24px;font-size:12.5px;line-height:1.6;color:var(--gray);max-width:760px;
+}
+
+@media (max-width:520px){
+  /* mobile collapse: hide LOW column on ROI table */
+  .roi-table th:nth-child(2),
+  .roi-table td:nth-child(2){display:none}
+  /* re-tighten roi padding on mobile */
+  .roi-table th,.roi-table td{padding:14px 10px;font-size:13px}
+  .phase-table th,.phase-table td{padding:12px 8px;font-size:12px}
+}
+
+/* Payment models */
+.pay-models{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  max-width:var(--max);margin:48px auto 0;
+}
+.pay-model{
+  border:1px solid var(--ink);
+  padding:28px 28px 32px;
+}
+.pay-model .l{
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);
+}
+.pay-model .name{
+  font-family:var(--t-display);font-weight:900;
+  font-size:22px;letter-spacing:-.005em;text-transform:uppercase;
+  margin:12px 0 16px;
+}
+.pay-model .desc{font-size:14px;line-height:1.6;color:#333;margin:0}
+.pay-model .tag{
+  display:inline-block;margin-top:18px;
+  font-family:var(--t-display);font-weight:700;
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+  border:1px solid var(--ink);padding:5px 10px;
+}
+@media (max-width:700px){
+  .pay-models{grid-template-columns:1fr}
+  .inv-head{grid-template-columns:1fr;gap:24px}
+}
+
+/* ------------------------------------------------------------
+   RESERVE STEPS (3-col)
+------------------------------------------------------------ */
+.res-head{margin-bottom:56px;max-width:var(--max);margin-left:auto;margin-right:auto}
+.res-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  max-width:var(--max);margin:0 auto;
+}
+.res-card{
+  border:1px solid var(--ink);
+  padding:36px 32px 40px;
+  display:flex;flex-direction:column;
+}
+.res-num{
+  font-family:var(--t-display);font-weight:900;
+  font-size:48px;letter-spacing:-.03em;line-height:1;
+  color:var(--ink);
+}
+.res-title{
+  margin:18px 0 14px;
+  font-family:var(--t-display);font-weight:900;
+  font-size:18px;letter-spacing:-.005em;text-transform:uppercase;line-height:1.15;
+}
+.res-body{font-size:14px;line-height:1.6;color:#333;margin:0}
+@media (max-width:900px){
+  .res-grid{grid-template-columns:1fr;gap:18px}
+}
+
+/* ------------------------------------------------------------
+   FAQ — accordion
+------------------------------------------------------------ */
+.faq-head{margin-bottom:48px;max-width:var(--max);margin-left:auto;margin-right:auto}
+.faq{max-width:var(--max);margin:0 auto;border-top:1px solid var(--ink)}
+.faq details{
+  border-bottom:1px solid var(--line);
+  padding:0;
+}
+.faq summary{
+  list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:24px;
+  padding:24px 0;
+  cursor:pointer;
+  font-family:var(--t-display);font-weight:900;
+  font-size:14px;letter-spacing:.04em;text-transform:uppercase;line-height:1.3;
+  color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";
+  font-family:var(--t-display);font-weight:400;font-size:24px;
+  color:var(--ink);
+  transition:transform .25s ease;
+  flex-shrink:0;
+  display:inline-block;
+  line-height:1;
+}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .answer{
+  padding:0 0 28px;
+  font-size:14.5px;line-height:1.7;color:#444;
+  max-width:880px;
+}
+.faq .answer p{margin:0 0 14px}
+.faq .answer p:last-child{margin-bottom:0}
+
+/* ------------------------------------------------------------
+   CONTACT BLOCK
+------------------------------------------------------------ */
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:center;
+  max-width:var(--max);margin:0 auto;
+}
+.contact-img{aspect-ratio:4 / 5;background:#1a1a1a;overflow:hidden;max-width:420px}
+.contact-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%) contrast(1.08)}
+.contact-text .label{margin-bottom:16px}
+.contact-name{
+  font-family:var(--t-display);font-weight:900;
+  font-size:clamp(28px,3.4vw,44px);
+  line-height:1.05;letter-spacing:-.015em;
+  margin:8px 0 8px;
+}
+.contact-role{
+  font-family:var(--t-display);font-weight:500;
+  font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);
+  margin-bottom:36px;
+}
+.contact-rows{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px 36px;
+  margin-bottom:36px;
+}
+.contact-row .l{
+  font-family:var(--t-display);font-weight:700;
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);
+  margin-bottom:4px;
+}
+.contact-row .v a, .contact-row .v{
+  font-family:var(--t-display);font-weight:500;
+  font-size:15.5px;color:var(--ink);
+}
+.section--dark .contact-row .l{color:var(--gray-soft)}
+.section--dark .contact-row .v a, .section--dark .contact-row .v{color:var(--paper)}
+.contact-row .v a:hover{color:var(--gray)}
+.btn-download{
+  display:inline-flex;align-items:center;gap:14px;
+  background:var(--paper);color:var(--ink);
+  padding:20px 32px;
+  font-family:var(--t-display);font-weight:700;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  transition:background .2s,color .2s;
+}
+.section--dark .btn-download{background:var(--paper);color:var(--ink)}
+.section--dark .btn-download:hover{background:#d9d9d9}
+.btn-download span.size{color:var(--gray);font-weight:500;letter-spacing:.12em}
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .contact-img{max-width:320px}
+  .contact-rows{grid-template-columns:1fr}
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+------------------------------------------------------------ */
+.footer{
+  background:var(--ink);color:var(--paper);
+  padding:96px var(--pad-x) 36px;
+}
+.footer-grid{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:48px;
+  padding-bottom:64px;border-bottom:1px solid #2a2a2a;
+}
+.footer-logo{
+  font-family:var(--t-display);font-weight:900;
+  font-size:clamp(28px,3vw,42px);
+  line-height:.92;letter-spacing:-.02em;text-transform:uppercase;color:var(--paper);
+}
+.footer-logo .tm{font-size:.32em;vertical-align:top;position:relative;top:.18em;margin-left:.06em}
+.footer-tagline{
+  margin-top:18px;font-size:12.5px;color:var(--gray-soft);letter-spacing:.02em;
+}
+.footer-col h4{
+  margin:0 0 18px;
+  font-family:var(--t-display);font-weight:700;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-soft);
+}
+.footer-col ul{list-style:none;padding:0;margin:0}
+.footer-col li{margin:0 0 10px}
+.footer-col a{
+  font-family:var(--t-display);font-weight:500;
+  font-size:13.5px;color:var(--paper);
+}
+.footer-col a:hover{color:var(--gray-soft)}
+.footer-bottom{
+  max-width:var(--max);margin:24px auto 0;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  font-family:var(--t-display);font-weight:500;
+  font-size:11.5px;letter-spacing:.06em;color:var(--gray-soft);
+}
+.footer-bottom .legal a{margin-left:18px}
+@media (max-width:900px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .footer-logo{grid-column:1 / -1}
+}
+@media (max-width:520px){
+  .footer-grid{grid-template-columns:1fr}
+}
+
+/* ------------------------------------------------------------
+   REVEAL ON SCROLL
+------------------------------------------------------------ */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .9s ease, transform .9s ease}
+.reveal.is-in{opacity:1;transform:none}
+
+/* utility */
+.small{font-size:12px;color:var(--gray)}
+.mt-0{margin-top:0}
+.mt-40{margin-top:40px}
+.mt-60{margin-top:60px}
+
+::selection{background:var(--ink);color:var(--paper)}
+</style>
+</head>
+
+<body data-version="tprc-v1">
+
+<!-- =========================================================
+     TOP NAV
+     ========================================================= -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a class="nav-logo" href="../tprc_landing/index.html" aria-label="The Personal Resort Company — home">
+        THE&nbsp;PERSONAL&nbsp;RESORT&nbsp;COMPANY<small>™</small>
+      </a>
+      <a class="nav-back" href="../tprc_landing/index.html">← Portfolio</a>
+    </div>
+    <div class="nav-links" role="navigation">
+      <a href="#property">Property</a>
+      <a href="#units">Units</a>
+      <a href="#investment">Investment</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="https://pauly-ceo.github.io/ananta-canggu-assets/Ananta_Investor_Pack.pdf" target="_blank" rel="noopener">Investor pack ↓</a>
+    <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO — pure typography, 4-line wordmark
+     ========================================================= -->
+<header class="hero" id="top">
+  <div class="hero-eyebrow"><span class="dot"></span>In preparation · Keys Q2 2028</div>
+  <div class="hero-meta-right">
+    Padang Linjong<br/>
+    Canggu · Bali<br/>
+    36 residences
+  </div>
+
+  <h1 class="wordmark" aria-label="Ananta Canggu Bali 2028">
+    <div>ANANTA</div>
+    <div>CANGGU</div>
+    <div>BALI</div>
+    <div>2028</div>
+  </h1>
+
+  <div class="hero-tagline">36 design-led residences · Padang Linjong · Canggu · Bali</div>
+
+  <div class="hero-status">
+    <span class="dot"></span>
+    <span>In preparation · Phase 1 from $199K · 6 of 9 VIP slots remain</span>
+  </div>
+</header>
+
+<!-- =========================================================
+     HEADLINE BLOCK
+     ========================================================= -->
+<section class="section" id="property">
+  <div class="headline-grid reveal">
+    <div class="left">
+      <div class="label">Property</div>
+      <h2 class="h-display mt-0">Three buildings. Thirty-six homes. One operating system.</h2>
+    </div>
+    <div class="right">
+      <p class="body-lg">
+        Ananta Canggu is a compact residential cluster on a 1,400 m² plot in Padang Linjong — four minutes by scooter from Echo Beach, eight on foot, and thirty-five to forty-five minutes from Ngurah Rai International. Three buildings, thirty-six residences, 1,884 m² saleable, 891 m² built-up.
+      </p>
+      <p class="body-lg">
+        The brief was deliberately small. Studio Identity Designers drew compact, design-led homes — three unit types, two outdoor moves, three rooftops — that sit inside Canggu's planning envelope without fighting it. Each residence is held individually by its owner; THIERRA Construction delivers the build under a fixed-scope contract.
+      </p>
+      <p class="body-lg">
+        Once the keys turn in Q2 2028, the buildings come online under TPRC operation. One brand standard, one P&amp;L per residence, one rental program. Owners read a clean monthly statement; we run the resort.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     STATS STRIP (dark)
+     ========================================================= -->
+<section class="section section--dark">
+  <div class="container reveal">
+    <div class="label" style="margin-bottom:48px">By the numbers</div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">36</div>
+        <div class="stat-label">Residences</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Buildings</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1,884</div>
+        <div class="stat-label">m² saleable area</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1,400</div>
+        <div class="stat-label">m² plot</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Q2<br/>2028</div>
+        <div class="stat-label">Key handover</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FULL-BLEED PHOTO
+     ========================================================= -->
+<div class="fullbleed reveal">
+  <img src="https://pauly-ceo.github.io/ananta-canggu-assets/render-facade.jpg" alt="Ananta Canggu — facade render" loading="lazy"
+       onerror="this.parentElement.style.background='#1a1a1a';this.remove()"/>
+  <div class="fullbleed-caption">Padang Linjong · Canggu · Bali</div>
+</div>
+
+<!-- =========================================================
+     ARCHITECTURE & DESIGN
+     ========================================================= -->
+<section class="section">
+  <div class="arch-grid reveal">
+    <div class="left">
+      <div class="label">Architecture &amp; design</div>
+    </div>
+    <div class="right">
+      <h2 class="h-medium mt-0">A small footprint, an organic skin, three rooftops.</h2>
+      <p class="body-lg" style="margin-top:32px">
+        Studio Identity Designers held the project tight: a single plot, three slender buildings, and a vegetal facade that handles the heat instead of fighting it. The structures sit low against the palm line, with bougainvillea cascading over the upper edges and a continuous run of window planters carving the elevations into vertical bands.
+      </p>
+      <p class="body-lg">
+        Inside, each residence is single-occupancy and single-storey, with a private outdoor move on every floor — a garden with hot tub on the ground level, planted alcoves on the second, rooftop access on the third. Three communal rooftops divide the leisure programme by mood: Wellness, Social, and Active. A full-width infinity pool runs along the top of the cluster.
+      </p>
+      <p class="body-lg">
+        THIERRA Construction is delivering the build under a fixed-scope contract, breaking ground Q3 2026 and sequencing handover for Q2 2028.
+      </p>
+    </div>
+  </div>
+
+  <div class="photo-strip reveal">
+    <div class="scene"><img src="https://pauly-ceo.github.io/ananta-canggu-assets/render-facade.jpg" alt="Organic facade with planted alcoves" loading="lazy"/></div>
+    <div class="scene"><img src="https://pauly-ceo.github.io/ananta-canggu-assets/render-palms.jpg" alt="Palm gardens" loading="lazy"/></div>
+    <div class="scene"><img src="https://pauly-ceo.github.io/ananta-canggu-assets/render-rooftop.jpg" alt="Rooftop infinity pool" loading="lazy"/></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SIGNATURE ELEMENTS — 6 grid
+     ========================================================= -->
+<section class="section">
+  <div class="container">
+    <div class="sig-head reveal">
+      <div class="label">Signature elements</div>
+      <h2 class="h-display mt-0">Six moves that define the building.</h2>
+    </div>
+
+    <div class="sig-grid reveal">
+      <div class="sig-item">
+        <div class="sig-num">01 · Skin</div>
+        <h3 class="sig-title">Organic facade</h3>
+        <p class="sig-body">An undulating screen of vertical timber and planted reveals breaks the elevation into bands of light and shadow. The skin handles the Canggu heat and the Canggu camera.</p>
+      </div>
+      <div class="sig-item">
+        <div class="sig-num">02 · Ground</div>
+        <h3 class="sig-title">Palm gardens</h3>
+        <p class="sig-body">The ground plane keeps the existing palm line and threads new tropical planting through it. Coconut, frangipani, heliconia — three layers of canopy, ground to sky.</p>
+      </div>
+      <div class="sig-item">
+        <div class="sig-num">03 · Top</div>
+        <h3 class="sig-title">Three rooftops</h3>
+        <p class="sig-body">Wellness, Social and Active. Three distinct programmes — sunrise yoga, day-bed pool, gym and stretch zone — separated by building so owners and guests pick their mood.</p>
+      </div>
+      <div class="sig-item">
+        <div class="sig-num">04 · Colour</div>
+        <h3 class="sig-title">Bougainvillea cascade</h3>
+        <p class="sig-body">Mature bougainvillea trails from the upper edges of each building, picking up the heat in spring and the camera year-round. The only saturated colour in the project.</p>
+      </div>
+      <div class="sig-item">
+        <div class="sig-num">05 · Water</div>
+        <h3 class="sig-title">Rooftop infinity pool</h3>
+        <p class="sig-body">A full-width pool along the top of the cluster, edge-flush with the planted parapet, oriented to catch the late-afternoon light off the Echo Beach line.</p>
+      </div>
+      <div class="sig-item">
+        <div class="sig-num">06 · Frame</div>
+        <h3 class="sig-title">Window planters</h3>
+        <p class="sig-body">A run of integrated window planters wraps the second floor, framing each opening with green. Privacy without curtains, view without exposure, screen without a wall.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     UNIT TYPES — 3 col cards
+     ========================================================= -->
+<section class="section" id="units">
+  <div class="container">
+    <div class="unit-head reveal">
+      <div class="label">Unit types</div>
+      <h2 class="h-display mt-0">Three floors. Three outdoor moves. Three prices.</h2>
+    </div>
+
+    <div class="unit-grid reveal">
+      <!-- Type A -->
+      <div class="unit-card">
+        <div class="unit-eyebrow">Type A · Ground floor</div>
+        <div class="unit-title">Garden &amp; hot&nbsp;tub</div>
+        <ul class="unit-bullets">
+          <li><span class="l">Indoor</span><span>48.4 m²</span></li>
+          <li><span class="l">Outdoor</span><span>~20 m² garden</span></li>
+          <li><span class="l">Feature</span><span>Private hot tub</span></li>
+        </ul>
+        <div class="unit-from">
+          <div class="l">From</div>
+          <div class="v">$199K</div>
+        </div>
+      </div>
+
+      <!-- Type B -->
+      <div class="unit-card">
+        <div class="unit-eyebrow">Type B · Second floor</div>
+        <div class="unit-title">Planted alcoves</div>
+        <ul class="unit-bullets">
+          <li><span class="l">Indoor</span><span>54.3 m²</span></li>
+          <li><span class="l">Outdoor</span><span>Window planters</span></li>
+          <li><span class="l">Feature</span><span>Vegetal screen façade</span></li>
+        </ul>
+        <div class="unit-from">
+          <div class="l">From</div>
+          <div class="v">$199K</div>
+        </div>
+      </div>
+
+      <!-- Type C -->
+      <div class="unit-card">
+        <div class="unit-eyebrow">Type C · Third floor</div>
+        <div class="unit-title">Rooftop access</div>
+        <ul class="unit-bullets">
+          <li><span class="l">Indoor</span><span>54.3 m²</span></li>
+          <li><span class="l">Outdoor</span><span>Rooftop access</span></li>
+          <li><span class="l">Feature</span><span>Infinity pool &amp; wellness</span></li>
+        </ul>
+        <div class="unit-from">
+          <div class="l">From</div>
+          <div class="v">$220K</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FLOOR PLANS
+     ========================================================= -->
+<section class="section">
+  <div class="container">
+    <div class="floor-head reveal">
+      <div>
+        <div class="label">Floor plans</div>
+        <h2 class="h-display mt-0">Schematic.<br/>Ground &amp; upper.</h2>
+      </div>
+      <div class="small" style="max-width:340px;text-align:right">
+        Open-plan kitchen-and-living, one bedroom, one full bathroom, private outdoor on every floor. Indicative — final dimensions confirmed at SPA.
+      </div>
+    </div>
+
+    <div class="floor-grid reveal">
+      <!-- Type A — Ground floor -->
+      <div class="floor-card">
+        <div class="floor-card-head">
+          <div class="floor-card-name">Type A · Ground</div>
+          <div class="floor-card-area"><strong>48.4 m²</strong>indoor<br/>+ ~20 m² garden</div>
+        </div>
+        <div class="floor-svg-wrap">
+          <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" aria-label="Type A ground floor plan">
+            <defs>
+              <pattern id="hatchA" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="6" stroke="#E5E5E5" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <!-- outer indoor wall -->
+            <rect x="40" y="40" width="280" height="280" fill="white" stroke="#0A0A0A" stroke-width="3"/>
+            <!-- garden zone (outdoor, hatched) -->
+            <rect x="320" y="40" width="140" height="280" fill="url(#hatchA)" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="390" y="105" font-family="Inter" font-size="11" font-weight="900" letter-spacing="2" text-anchor="middle" fill="#0A0A0A">GARDEN</text>
+            <text x="390" y="124" font-family="Inter" font-size="9" font-weight="500" letter-spacing="1.5" text-anchor="middle" fill="#7A7A7A">~20 m²</text>
+            <!-- hot tub -->
+            <rect x="350" y="200" width="80" height="60" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="2"/>
+            <text x="390" y="237" font-family="Inter" font-size="8" font-weight="700" letter-spacing="2" text-anchor="middle" fill="white">HOT TUB</text>
+            <!-- living -->
+            <rect x="60" y="60" width="160" height="120" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="140" y="120" font-family="Inter" font-size="11" font-weight="900" letter-spacing="1.5" text-anchor="middle" fill="#0A0A0A">LIVING</text>
+            <text x="140" y="138" font-family="Inter" font-size="9" font-weight="500" letter-spacing="1.5" text-anchor="middle" fill="#7A7A7A">open plan</text>
+            <!-- kitchen -->
+            <rect x="220" y="60" width="80" height="120" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="260" y="120" font-family="Inter" font-size="10" font-weight="900" letter-spacing="1.5" text-anchor="middle" fill="#0A0A0A">KITCHEN</text>
+            <!-- island -->
+            <rect x="232" y="148" width="56" height="16" fill="#0A0A0A"/>
+            <!-- bedroom -->
+            <rect x="60" y="200" width="160" height="100" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="140" y="252" font-family="Inter" font-size="11" font-weight="900" letter-spacing="1.5" text-anchor="middle" fill="#0A0A0A">BEDROOM</text>
+            <!-- bath -->
+            <rect x="220" y="200" width="80" height="60" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="260" y="234" font-family="Inter" font-size="9" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#0A0A0A">BATH</text>
+            <!-- entry -->
+            <rect x="220" y="270" width="80" height="30" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="260" y="290" font-family="Inter" font-size="8" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#0A0A0A">ENTRY</text>
+            <!-- door opening between living and garden -->
+            <line x1="320" y1="100" x2="320" y2="160" stroke="white" stroke-width="4"/>
+            <!-- north arrow -->
+            <g transform="translate(60,360)">
+              <line x1="0" y1="0" x2="0" y2="22" stroke="#7A7A7A" stroke-width="1"/>
+              <polygon points="0,-4 -4,4 4,4" fill="#0A0A0A"/>
+              <text x="0" y="36" font-family="Inter" font-size="9" font-weight="700" letter-spacing="1" text-anchor="middle" fill="#7A7A7A">N</text>
+            </g>
+          </svg>
+        </div>
+        <div class="floor-legend">
+          <span>Living + kitchen</span><span>Bedroom</span><span>Bath</span><span>Entry</span><span>Garden ~20 m²</span><span>Hot tub</span>
+        </div>
+      </div>
+
+      <!-- Type B & C — Upper floor -->
+      <div class="floor-card">
+        <div class="floor-card-head">
+          <div class="floor-card-name">Type B / C · Upper</div>
+          <div class="floor-card-area"><strong>54.3 m²</strong>indoor<br/>+ planters / roof</div>
+        </div>
+        <div class="floor-svg-wrap">
+          <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" aria-label="Type B and C upper floor plan">
+            <defs>
+              <pattern id="hatchBC" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="6" stroke="#E5E5E5" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <!-- outer indoor wall (larger plate) -->
+            <rect x="40" y="40" width="340" height="280" fill="white" stroke="#0A0A0A" stroke-width="3"/>
+            <!-- window planter strip (left) -->
+            <rect x="40" y="40" width="20" height="280" fill="url(#hatchBC)" stroke="#0A0A0A" stroke-width="1"/>
+            <text x="50" y="186" font-family="Inter" font-size="7" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#7A7A7A" transform="rotate(-90 50 186)">PLANTERS</text>
+            <!-- terrace (right) -->
+            <rect x="380" y="40" width="80" height="280" fill="url(#hatchBC)" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="420" y="170" font-family="Inter" font-size="11" font-weight="900" letter-spacing="2" text-anchor="middle" fill="#0A0A0A">TERRACE</text>
+            <text x="420" y="190" font-family="Inter" font-size="8" font-weight="500" letter-spacing="1.5" text-anchor="middle" fill="#7A7A7A">/ rooftop</text>
+            <!-- living -->
+            <rect x="70" y="60" width="160" height="140" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="150" y="125" font-family="Inter" font-size="11" font-weight="900" letter-spacing="1.5" text-anchor="middle" fill="#0A0A0A">LIVING</text>
+            <text x="150" y="145" font-family="Inter" font-size="9" font-weight="500" letter-spacing="1.5" text-anchor="middle" fill="#7A7A7A">open plan</text>
+            <!-- kitchen -->
+            <rect x="230" y="60" width="130" height="100" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="295" y="105" font-family="Inter" font-size="10" font-weight="900" letter-spacing="1.5" text-anchor="middle" fill="#0A0A0A">KITCHEN</text>
+            <!-- island -->
+            <rect x="248" y="125" width="94" height="16" fill="#0A0A0A"/>
+            <!-- bedroom -->
+            <rect x="70" y="220" width="180" height="80" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="160" y="262" font-family="Inter" font-size="11" font-weight="900" letter-spacing="1.5" text-anchor="middle" fill="#0A0A0A">BEDROOM</text>
+            <!-- bath -->
+            <rect x="260" y="180" width="100" height="60" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="310" y="214" font-family="Inter" font-size="9" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#0A0A0A">BATH</text>
+            <!-- entry / hall -->
+            <rect x="260" y="250" width="100" height="50" fill="none" stroke="#0A0A0A" stroke-width="1.5"/>
+            <text x="310" y="280" font-family="Inter" font-size="9" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#0A0A0A">ENTRY</text>
+            <!-- door opening to terrace -->
+            <line x1="380" y1="100" x2="380" y2="160" stroke="white" stroke-width="4"/>
+            <!-- north arrow -->
+            <g transform="translate(60,360)">
+              <line x1="0" y1="0" x2="0" y2="22" stroke="#7A7A7A" stroke-width="1"/>
+              <polygon points="0,-4 -4,4 4,4" fill="#0A0A0A"/>
+              <text x="0" y="36" font-family="Inter" font-size="9" font-weight="700" letter-spacing="1" text-anchor="middle" fill="#7A7A7A">N</text>
+            </g>
+          </svg>
+        </div>
+        <div class="floor-legend">
+          <span>Living + kitchen</span><span>Bedroom</span><span>Bath</span><span>Entry</span><span>Window planters</span><span>Terrace / rooftop</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     LOCATION
+     ========================================================= -->
+<section class="section" id="location">
+  <div class="container">
+    <div class="loc-head reveal">
+      <div class="label">Location</div>
+      <h2 class="h-display mt-0">Padang Linjong, Canggu.<br/>Eight minutes to Echo Beach.</h2>
+    </div>
+
+    <div class="loc-facts reveal">
+      <div class="loc-fact">
+        <div class="loc-fact-n">4 min</div>
+        <div class="loc-fact-l">To Echo Beach</div>
+      </div>
+      <div class="loc-fact">
+        <div class="loc-fact-n">35–45 min</div>
+        <div class="loc-fact-l">To airport</div>
+      </div>
+      <div class="loc-fact">
+        <div class="loc-fact-n">3</div>
+        <div class="loc-fact-l">Buildings</div>
+      </div>
+      <div class="loc-fact">
+        <div class="loc-fact-n">Q2 2028</div>
+        <div class="loc-fact-l">Keys</div>
+      </div>
+    </div>
+
+    <div class="loc-body reveal">
+      <p>
+        The site sits in Padang Linjong, the residential ridge that backs Canggu's surf coast. Echo Beach is four minutes by scooter, eight on foot. Old Man's, Batu Bolong, Pererenan and Berawa — the four breaks that define this stretch — are all inside a fifteen-minute scooter ride. Tanah Lot temple is twenty minutes north along the coast road.
+      </p>
+      <p>
+        Day-to-day, the neighbourhood reads as the most operationally serious cluster on the island: La Brisa, FINNS Beach Club and Atlas Beach Fest within a single ride, the deepest concentration of speciality coffee and co-working in Indonesia, and a year-round restaurant scene that holds the rate up through low season. Indonesia recorded 6.95 million international arrivals in 2025; Canggu absorbs a disproportionate share of the repeat-visitor cohort.
+      </p>
+      <p>
+        Ngurah Rai International is thirty-five to forty-five minutes by car, depending on traffic. The site is gated, set back from the main road, and zoned for tourism use.
+      </p>
+      <a class="loc-map" href="https://maps.google.com/?q=Padang+Linjong+Canggu+Bali" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONSTRUCTION TIMELINE
+     ========================================================= -->
+<section class="section">
+  <div class="container">
+    <div class="time-head reveal">
+      <div class="label">Construction timeline</div>
+      <h2 class="h-display mt-0">Six milestones.<br/>Ground to rental income.</h2>
+    </div>
+
+    <div class="time-track reveal">
+      <div class="time-grid">
+        <div class="time-step">
+          <div class="time-q">Q3 2026</div>
+          <div class="time-desc">Break ground<small>Site mobilisation, foundations</small></div>
+        </div>
+        <div class="time-step">
+          <div class="time-q">Q4 2026</div>
+          <div class="time-desc">First payment · 30% SPA<small>Tied to SPA signing</small></div>
+        </div>
+        <div class="time-step">
+          <div class="time-q">Q3 2027</div>
+          <div class="time-desc">Shell complete · 40%<small>Structure, roof, façade</small></div>
+        </div>
+        <div class="time-step">
+          <div class="time-q">Q1 2028</div>
+          <div class="time-desc">Fit-out<small>MEP, finishes, FF&amp;E</small></div>
+        </div>
+        <div class="time-step">
+          <div class="time-q">Q2 2028</div>
+          <div class="time-desc">Key handover · 30%<small>Final payment, snag, transfer</small></div>
+        </div>
+        <div class="time-step">
+          <div class="time-q">Q3 2028</div>
+          <div class="time-desc">Rental income begins<small>TPRC operation live</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     INVESTMENT — ROI TABLE + ILLUSTRATIVE + PHASES + MODELS
+     ========================================================= -->
+<section class="section" id="investment">
+  <div class="container">
+    <div class="inv-head reveal">
+      <div>
+        <div class="label">Investment</div>
+        <h2 class="h-display mt-0">Investment.</h2>
+      </div>
+      <p>
+        Three operating scenarios per floor — LOW, MID, HIGH — on the Phase 2 base price. ADR $140–$215, base occupancy 70%, 256 average rented nights per year. All figures USD, per unit, per annum. Indicative — not a guarantee.
+      </p>
+    </div>
+
+    <div class="roi-wrap reveal">
+      <table class="roi-table" aria-label="ROI per floor and scenario">
+        <thead>
+          <tr>
+            <th>Floor</th>
+            <th>Price</th>
+            <th>LOW</th>
+            <th>MID</th>
+            <th>HIGH</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GF · Type A</td>
+            <td>$199K</td>
+            <td>9.0%</td>
+            <td>10.4%</td>
+            <td>12.0%</td>
+          </tr>
+          <tr>
+            <td>2F · Type B</td>
+            <td>$199K</td>
+            <td>9.1%</td>
+            <td>10.4%</td>
+            <td>12.1%</td>
+          </tr>
+          <tr class="row-emph">
+            <td>3F · Type C</td>
+            <td>$220K</td>
+            <td>10.0%</td>
+            <td>12.4%</td>
+            <td>13.0%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="roi-caption">
+        ADR $140–$215, base occupancy 70%, 256 average rented nights/year. Sources: Bali Home Immo Q1 2025, Bukit Vista 2024–2025. Capital appreciation excluded — the table shows rental yield only.
+      </p>
+    </div>
+
+    <!-- Illustrative example -->
+    <div class="ill-wrap reveal">
+      <div class="ill-head">
+        <div class="label">Illustrative · 2F Type B · MID scenario</div>
+        <div class="h-medium mt-0" style="margin-top:14px">$199K unit at 70% occupancy.</div>
+      </div>
+      <div class="ill-grid">
+        <div class="ill-lines">
+          <div class="ill-line"><span class="l">Gross rental p.a.</span><span class="v">$41,392</span></div>
+          <div class="ill-line sub"><span class="l">− Management 20%</span><span class="v">−$8,278</span></div>
+          <div class="ill-line sub"><span class="l">− OPEX &amp; utilities</span><span class="v">−$12,418</span></div>
+        </div>
+        <div class="ill-net">
+          <div class="l">Net profit p.a.</div>
+          <div class="n">$20,696</div>
+          <div class="k">
+            <span>10.4% ROI</span>
+            <span>9.6 yrs payback</span>
+            <span>3-yr return $62,088</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-phase pricing table -->
+    <div class="phase-wrap reveal">
+      <div class="phase-head">
+        <div class="label">Phased pricing</div>
+        <div class="h-medium mt-0" style="margin-top:14px">Four phases. Price steps with sales progress.</div>
+      </div>
+      <table class="phase-table" aria-label="Four-phase pricing">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Status</th>
+            <th>GF / 2F</th>
+            <th>3F</th>
+            <th>Discount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="vip">
+            <td><span class="red"></span>Phase 1 · VIP</td>
+            <td>First 9 buyers · 0–25% sold</td>
+            <td>$191K</td>
+            <td>$211K</td>
+            <td>−4%</td>
+          </tr>
+          <tr>
+            <td>Phase 2 · Standard</td>
+            <td>25–70% sold</td>
+            <td>$199K</td>
+            <td>$220K</td>
+            <td>Base</td>
+          </tr>
+          <tr>
+            <td>Phase 3 · Scarcity</td>
+            <td>70–95% sold</td>
+            <td>$209K</td>
+            <td>$231K</td>
+            <td>+5%</td>
+          </tr>
+          <tr>
+            <td>Phase 4 · Completion</td>
+            <td>95%+ sold</td>
+            <td>$219K</td>
+            <td>$242K</td>
+            <td>+10%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="phase-caption">
+        Prices step automatically with sales progress. Today's price will be approximately 14% higher at completion. Phase 1 VIP locks the lowest base for the first nine buyers.
+      </p>
+    </div>
+
+    <!-- Payment models -->
+    <div class="pay-models reveal">
+      <div class="pay-model">
+        <div class="l">Model A · Recommended</div>
+        <div class="name">30 / 40 / 30 milestone</div>
+        <p class="desc">Base price. Thirty percent at SPA signing, forty percent at shell completion, thirty percent at key handover. Tied to construction progress, no upfront cash beyond the SPA milestone.</p>
+        <span class="tag">Base price</span>
+      </div>
+      <div class="pay-model">
+        <div class="l">Model B · Cash</div>
+        <div class="name">100% at SPA</div>
+        <p class="desc">Full payment at SPA signing. Five percent discount applied to the base price. Suited to buyers wiring from a single source.</p>
+        <span class="tag">−5% discount</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     RESERVE STEPS — 3 col
+     ========================================================= -->
+<section class="section">
+  <div class="container">
+    <div class="res-head reveal">
+      <div class="label">How to reserve</div>
+      <h2 class="h-display mt-0">Three steps.<br/>From hold to deed.</h2>
+    </div>
+
+    <div class="res-grid reveal">
+      <div class="res-card">
+        <div class="res-num">01</div>
+        <h3 class="res-title">Reservation</h3>
+        <p class="res-body">Two percent today locks the unit and the current Phase 1 price for fourteen days. Reservation fee is fully deductible from the first SPA milestone.</p>
+      </div>
+      <div class="res-card">
+        <div class="res-num">02</div>
+        <h3 class="res-title">SPA signing</h3>
+        <p class="res-body">Within fourteen days of reservation. Executed by DocuSign, in English and Bahasa Indonesia. The signing triggers the first thirty percent milestone payment.</p>
+      </div>
+      <div class="res-card">
+        <div class="res-num">03</div>
+        <h3 class="res-title">Transfer deed</h3>
+        <p class="res-body">Executed at handover before a Bali notary. The ten percent Indonesian transfer tax and one percent notary fee are included in the published price.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FAQ
+     ========================================================= -->
+<section class="section">
+  <div class="container">
+    <div class="faq-head reveal">
+      <div class="label">Frequently asked</div>
+      <h2 class="h-display mt-0">Top ten questions.</h2>
+    </div>
+
+    <div class="faq reveal">
+      <details>
+        <summary>01 · Leasehold structure and duration</summary>
+        <div class="answer">
+          <p>Each residence is held on a leasehold of thirty years with a contractually pre-agreed thirty-year extension, signed and notarised at handover. The leasehold is registered with the Bali land office in the owner's own name — there is no nominee structure and no PT PMA requirement.</p>
+          <p>Foreign nationals can hold leasehold title directly under Indonesian law. The structure is the same one used by every major five-star branded residence on the island.</p>
+        </div>
+      </details>
+      <details>
+        <summary>02 · Source and realism of the projected ROI</summary>
+        <div class="answer">
+          <p>ADR and occupancy are modelled against the Bali Home Immo Q1 2025 Canggu submarket report and the Bukit Vista 2024–2025 operating dataset. Macro inputs cross-check against BPS Statistics Indonesia tourism data, which recorded 6.95 million international arrivals in 2025.</p>
+          <p>The MID scenario uses 70 percent occupancy and 256 rented nights per year — both conservative against published Canggu averages. The HIGH scenario reflects peak-season-weighted operating data from comparable TPRC-managed units in the submarket.</p>
+        </div>
+      </details>
+      <details>
+        <summary>03 · Profit share and rental program split</summary>
+        <div class="answer">
+          <p>TPRC charges a flat twenty percent management fee on gross rental income. Operating expenses — utilities, daily service, marketing distribution and ongoing maintenance — are passed through at cost on a transparent monthly statement.</p>
+          <p>There is no separate marketing fee, no booking commission stacking, and no minimum-nights clause that holds the unit off the rental pool. The owner receives a single monthly net figure with full underlying detail.</p>
+        </div>
+      </details>
+      <details>
+        <summary>04 · Currency and foreign-exchange risk</summary>
+        <div class="answer">
+          <p>The SPA is denominated in US dollars. Construction is contracted by THIERRA in Indonesian rupiah with USD hedging built into the fixed-scope agreement, so the buyer is not exposed to construction-side FX drift between SPA and handover.</p>
+          <p>Post-handover, gross rental income is collected in a mix of currencies through the distribution channels (USD, IDR, AUD, EUR) and net-settled to the owner in their preferred currency monthly. Owners can also elect to hold a USD balance with TPRC and draw monthly.</p>
+        </div>
+      </details>
+      <details>
+        <summary>05 · Exit strategy and resale liquidity</summary>
+        <div class="answer">
+          <p>Secondary-market resale of Canggu leasehold residences is a well-established route in Bali. TPRC maintains an internal buyer waitlist and an outbound partner network across Europe, the Gulf, and Singapore that surfaces qualified resale demand.</p>
+          <p>Owners can list at any time after handover. TPRC handles the listing, qualified-buyer screening, leasehold transfer paperwork and notarisation against a flat one percent placement fee on the sale price.</p>
+        </div>
+      </details>
+      <details>
+        <summary>06 · Owner usage — fourteen free nights per year</summary>
+        <div class="answer">
+          <p>Each owner is entitled to fourteen complimentary nights per calendar year in their own unit, bookable through a private owner portal up to nine months in advance. Nights are stay-only — utilities and daily service are passed through at cost.</p>
+          <p>Owners can also book additional nights at a flat thirty percent discount on the published nightly rate, subject to availability. There is no minimum-stay restriction on owner usage.</p>
+        </div>
+      </details>
+      <details>
+        <summary>07 · Construction delay protections</summary>
+        <div class="answer">
+          <p>The SPA includes a liquidated-damages clause at zero point one percent of the contract price per day of delay beyond the Q2 2028 handover date, capped at five percent. THIERRA's fixed-scope build contract sits behind the same LD schedule.</p>
+          <p>All milestone payments are held in a Bali notary escrow and released against verified construction certificates from an independent third-party surveyor. No payment moves on the developer's say-so.</p>
+        </div>
+      </details>
+      <details>
+        <summary>08 · Resale before completion</summary>
+        <div class="answer">
+          <p>Pre-handover assignment of the SPA is permitted with TPRC's written consent — withheld only against payment status, not the resale price. There is no anti-flipping clause: an early reseller keeps their realised uplift in full.</p>
+          <p>TPRC will surface the unit to its internal buyer waitlist and partner network on the same terms as a post-handover resale, against a flat one percent placement fee on the assignment price.</p>
+        </div>
+      </details>
+      <details>
+        <summary>09 · Ongoing costs — service charge, taxes, utilities</summary>
+        <div class="answer">
+          <p>The service charge covers shared-area maintenance, security, landscaping, the three rooftops, and the rooftop infinity pool. Indicative cost is $1,800 per unit per year, billed in two semi-annual instalments. Utilities are metered per unit and passed through at cost.</p>
+          <p>Indonesian property tax (PBB) is approximately 0.1 percent of assessed value per year. Income tax on rental yield is handled through TPRC's licensed local accountant — typically a final 10 percent withholding for non-resident owners.</p>
+        </div>
+      </details>
+      <details>
+        <summary>10 · What happens if TPRC stops operating</summary>
+        <div class="answer">
+          <p>The leasehold title and the underlying SPA sit with the owner directly, not with TPRC. If TPRC were to cease operating, the residence remains the owner's property and the operating contract can be assigned to any qualified operator on the island.</p>
+          <p>TPRC's operating contract is renewed annually and terminable with ninety days' notice by either party. The owner is never locked into a long-form operating agreement they cannot exit, and the property is never structurally dependent on TPRC as an entity.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+<section class="section section--dark" id="contact">
+  <div class="contact-grid reveal">
+    <div class="contact-img">
+      <img src="https://pauly-ceo.github.io/ananta-canggu-assets/kristyna.jpg" alt="Dr. Kristýna Pauly" loading="lazy"
+           onerror="this.parentElement.style.background='#222';this.replaceWith(Object.assign(document.createElement('div'),{style:'width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#888;font-family:Inter;font-size:11px;letter-spacing:.2em;text-transform:uppercase',innerText:'Kristýna Pauly'}))"/>
+    </div>
+    <div class="contact-text">
+      <div class="label">Speak with Kristýna</div>
+      <div class="contact-name">Dr. Kristýna Pauly</div>
+      <div class="contact-role">Investor relations · The Personal Resort Company</div>
+
+      <div class="contact-rows">
+        <div class="contact-row">
+          <div class="l">Email</div>
+          <div class="v"><a href="mailto:kristyna.pauly@thepersonalresorts.com">kristyna.pauly@thepersonalresorts.com</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="l">Phone</div>
+          <div class="v"><a href="tel:+420607207207">+420 607 207 207</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="l">WhatsApp</div>
+          <div class="v"><a href="https://wa.me/420739685681" target="_blank" rel="noopener">+420 739 685 681</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="l">Office</div>
+          <div class="v">Prague · Bali</div>
+        </div>
+      </div>
+
+      <a class="btn-download" href="https://pauly-ceo.github.io/ananta-canggu-assets/Ananta_Investor_Pack.pdf" target="_blank" rel="noopener">
+        Download investor pack <span class="size">· PDF · 29 pages</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        THE<br/>PERSONAL<br/>RESORT<br/>COMPANY<span class="tm">™</span>
+      </div>
+      <div class="footer-tagline">category owner system brand</div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Property</h4>
+      <ul>
+        <li><a href="#property">Overview</a></li>
+        <li><a href="#units">Unit types</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Investment</h4>
+      <ul>
+        <li><a href="#investment">ROI scenarios</a></li>
+        <li><a href="#investment">Phased pricing</a></li>
+        <li><a href="https://pauly-ceo.github.io/ananta-canggu-assets/Ananta_Investor_Pack.pdf" target="_blank" rel="noopener">Investor pack (PDF)</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:kristyna.pauly@thepersonalresorts.com">Email Kristýna</a></li>
+        <li><a href="tel:+420607207207">+420 607 207 207</a></li>
+        <li><a href="https://wa.me/420739685681" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 The Personal Resort Company™ · Built by THIERRA · Backed by FIPOX</div>
+    <div class="legal">
+      <a href="#">Legal</a>
+      <a href="#">Privacy</a>
+      <a href="#">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Reveal on scroll */
+(function(){
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('is-in')});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      }
+    });
+  },{rootMargin:'0px 0px -10% 0px',threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+
+/* Burger — mobile menu */
+(function(){
+  var burger = document.querySelector('.nav-burger');
+  if(!burger) return;
+  burger.addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu-open');
+    var existing = document.getElementById('m-menu');
+    if(open && !existing){
+      var menu = document.createElement('div');
+      menu.id = 'm-menu';
+      menu.style.cssText = 'position:fixed;inset:64px 0 0 0;background:#fff;z-index:49;padding:40px 24px;display:flex;flex-direction:column;gap:24px;font-family:Inter,system-ui,sans-serif;font-weight:900;font-size:24px;letter-spacing:-.01em;text-transform:uppercase;border-top:1px solid #E5E5E5';
+      menu.innerHTML = [
+        '<a href="#property">Property</a>',
+        '<a href="#units">Units</a>',
+        '<a href="#investment">Investment</a>',
+        '<a href="#contact">Contact</a>',
+        '<a href="https://pauly-ceo.github.io/ananta-canggu-assets/Ananta_Investor_Pack.pdf" target="_blank" rel="noopener" style="margin-top:24px;font-size:13px;letter-spacing:.18em;border:1px solid #0A0A0A;padding:14px 18px;display:inline-block;width:fit-content">Investor pack ↓</a>'
+      ].join('');
+      document.body.appendChild(menu);
+      menu.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          document.body.classList.remove('menu-open');
+          menu.remove();
+        });
+      });
+    } else if(!open && existing){
+      existing.remove();
+    }
+  });
+})();
+</script>
+</body>
+</html>
