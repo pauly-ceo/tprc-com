@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&family=Mona+Sans:ital,wdth,wght@0,75..125,100..900&display=swap" rel="stylesheet">
 <link rel="preload" as="video" href="hero.mp4" type="video/mp4">
-<link rel="preload" as="image" href="hero02.jpg">
+<link rel="preload" as="image" href="hero-poster.jpg">
 <style>
 /* ========== RESET & BASE ========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -86,7 +86,7 @@ a{color:inherit;text-decoration:none}
 }
 .hero__poster{
   position:absolute;inset:0;width:100%;height:100%;
-  background:url('hero02.jpg') center/cover no-repeat;
+  background:url('hero-poster.jpg') center/cover no-repeat;
   filter:grayscale(100%) contrast(1.06) brightness(0.78);
   z-index:1;
   opacity:0;
@@ -548,7 +548,7 @@ body.menu-open{overflow:hidden}
 <section class="hero" id="hero">
   <video class="hero__video" id="heroVideo"
          autoplay muted loop playsinline preload="auto"
-         poster="hero02.jpg">
+         poster="hero-poster.jpg">
     <source src="hero.mp4" type="video/mp4">
   </video>
   <div class="hero__poster"></div>
