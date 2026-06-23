@@ -255,6 +255,11 @@ a{color:inherit;text-decoration:none}
 }
 .proj__status .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2.4s infinite}
 .proj__status.is-prep .dot{background:#0a0a0a;animation:none;opacity:0.35}
+.proj__status.is-op .dot{background:#6b6b6b;animation:none;opacity:0.7}
+.proj__sub{
+  font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--mute);margin-top:6px;line-height:1.5;
+}
 
 /* ========== MANIFESTO ========== */
 .manifesto{
@@ -440,11 +445,11 @@ body.menu-open{overflow:hidden}
 <section class="status">
   <div class="status__inner">
     <div class="status__pills">
-      <span class="status__pill"><span class="dot dot--live"></span> In construction · Bukit, Bali</span>
-      <span class="status__pill"><span class="dot dot--inactive"></span> In preparation · Canggu, Bali</span>
-      <span class="status__pill"><span class="dot dot--inactive"></span> In architecture · CZ pipeline</span>
+      <span class="status__pill"><span class="dot dot--live"></span> 2 selling now</span>
+      <span class="status__pill"><span class="dot dot--inactive"></span> 4 in pre-launch</span>
+      <span class="status__pill"><span class="dot dot--inactive"></span> 1 operating</span>
     </div>
-    <div class="status__meta">2 brands · 44 units · 6 pipeline assets</div>
+    <div class="status__meta">7 projects · CZ · ID · HR · ~6 bn CZK in motion</div>
   </div>
 </section>
 
@@ -456,43 +461,139 @@ body.menu-open{overflow:hidden}
         <div class="eyebrow">I. Portfolio</div>
       </div>
       <div>
-        <h2 class="section__title">Live brands<br>under TPRC&trade;</h2>
-        <p class="section__lead">TPRC is the architect and operator. The brand the guest knows is <strong>Ananta</strong>. Two assets live, more in architecture.</p>
+        <h2 class="section__title">Brands &amp; assets<br>under TPRC&trade;</h2>
+        <p class="section__lead">TPRC is the architect and operator. The brand the guest knows is its own — <strong>Ananta</strong>, <strong>Lesní stráně</strong>, <strong>Bukovka</strong> &amp; the rest. Seven assets across three countries.</p>
       </div>
     </div>
 
     <div class="portfolio__grid">
-      <a class="proj reveal" href="https://pauly-ceo.github.io/ananta-villas-assets/" target="_blank" rel="noopener">
-        <div class="proj__photo" style="background-image:url('hero02.jpg')"></div>
+
+      <!-- 1 · Lesní stráně -->
+      <a class="proj reveal" href="https://www.lesnistrane.cz/cs/uvod" target="_blank" rel="noopener">
+        <div class="proj__photo" style="background-image:url('https://www.lesnistrane.cz/upItems/imgs/001/DOMOPLAN_LESNI_STRANE_EXTERIER_WELLNESS_1_02_4K_full_0001.jpg')"></div>
         <div class="proj__body">
           <div class="proj__row">
-            <div class="proj__name">Ananta Villas</div>
-            <div class="proj__loc">Bukit · Bali</div>
+            <div class="proj__name">Lesní stráně</div>
+            <div class="proj__loc">Jeseníky · CZ</div>
           </div>
           <div class="proj__meta">
-            <div class="proj__meta-it"><div class="proj__meta-k">Units</div><div class="proj__meta-v">8 villas</div></div>
-            <div class="proj__meta-it"><div class="proj__meta-k">Handover</div><div class="proj__meta-v">Q3 2027</div></div>
-            <div class="proj__meta-it"><div class="proj__meta-k">From</div><div class="proj__meta-v">$355K</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Use</div><div class="proj__meta-v">Forest apt · wellness</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Volume</div><div class="proj__meta-v">480 mil. Kč</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Start</div><div class="proj__meta-v">2026</div></div>
           </div>
-          <div class="proj__status"><span class="dot"></span> In construction · 1 of 8 remain</div>
+          <div class="proj__status"><span class="dot"></span> Selling now</div>
+          <div class="proj__sub">Colllab Studio · Identity Designers</div>
         </div>
       </a>
 
+      <!-- 2 · Aparthotel Bukovka -->
+      <a class="proj reveal" href="https://pauly-ceo.github.io/bukovka/" target="_blank" rel="noopener">
+        <div class="proj__photo" style="background-image:url('https://www.myresorts.eu/upItems/imgs/001/Bukovka_Epicentrum_Pohled_Terasa_wide.jpg')"></div>
+        <div class="proj__body">
+          <div class="proj__row">
+            <div class="proj__name">Aparthotel Bukovka</div>
+            <div class="proj__loc">Orlické hory · CZ</div>
+          </div>
+          <div class="proj__meta">
+            <div class="proj__meta-it"><div class="proj__meta-k">Use</div><div class="proj__meta-v">**** Apt hotel · ski-in</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Volume</div><div class="proj__meta-v">539 mil. Kč</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Start</div><div class="proj__meta-v">2026</div></div>
+          </div>
+          <div class="proj__status is-prep"><span class="dot"></span> Pre-launch</div>
+          <div class="proj__sub">Studio Identity Design · London</div>
+        </div>
+      </a>
+
+      <!-- 3 · Aparthotel Stará pošta -->
+      <a class="proj reveal" href="https://pauly-ceo.github.io/stara-posta/" target="_blank" rel="noopener">
+        <div class="proj__photo" style="background-image:url('https://www.myresorts.eu/upItems/imgs/01_wide.jpg')"></div>
+        <div class="proj__body">
+          <div class="proj__row">
+            <div class="proj__name">Aparthotel Stará pošta</div>
+            <div class="proj__loc">Jeseníky · CZ</div>
+          </div>
+          <div class="proj__meta">
+            <div class="proj__meta-it"><div class="proj__meta-k">Use</div><div class="proj__meta-v">**** Aparthotel · wellness</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Volume</div><div class="proj__meta-v">412 mil. Kč</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Start</div><div class="proj__meta-v">2025</div></div>
+          </div>
+          <div class="proj__status is-prep"><span class="dot"></span> Pre-launch</div>
+          <div class="proj__sub">Colllab · Identity Design · Krejčiříkovi</div>
+        </div>
+      </a>
+
+      <!-- 4 · Apartmány Filipovice -->
+      <a class="proj reveal" href="https://www.myresorts.eu/cs/projekt/apartmany-filipovice-4UXTy5" target="_blank" rel="noopener">
+        <div class="proj__photo" style="background-image:url('https://www.myresorts.eu/upItems/imgs/domoplan_filipovice_jirihlousekphoto_3358_wide.jpg')"></div>
+        <div class="proj__body">
+          <div class="proj__row">
+            <div class="proj__name">Apartmány Filipovice</div>
+            <div class="proj__loc">Jeseníky · CZ</div>
+          </div>
+          <div class="proj__meta">
+            <div class="proj__meta-it"><div class="proj__meta-k">Use</div><div class="proj__meta-v">Apartments · 24 units</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Delivered</div><div class="proj__meta-v">2020</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Status</div><div class="proj__meta-v">Operating</div></div>
+          </div>
+          <div class="proj__status is-op"><span class="dot"></span> Operating</div>
+          <div class="proj__sub">Colllab Studio</div>
+        </div>
+      </a>
+
+      <!-- 5 · Ananta Villas -->
+      <a class="proj reveal" href="https://pauly-ceo.github.io/ananta-villas-assets/" target="_blank" rel="noopener">
+        <div class="proj__photo" style="background-image:url('https://www.myresorts.eu/upItems/imgs/mnlt_25_123_FPX_251029_cam_lehkost_FINAL_wide_0002.jpg')"></div>
+        <div class="proj__body">
+          <div class="proj__row">
+            <div class="proj__name">Ananta Villas</div>
+            <div class="proj__loc">Bukit · Bali · ID</div>
+          </div>
+          <div class="proj__meta">
+            <div class="proj__meta-it"><div class="proj__meta-k">Use</div><div class="proj__meta-v">Private villas · cliff</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Handover</div><div class="proj__meta-v">Q3 2027</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">From</div><div class="proj__meta-v">$355K</div></div>
+          </div>
+          <div class="proj__status"><span class="dot"></span> 1 of 8 remains</div>
+          <div class="proj__sub">Studio Identity Designers · Built by THIERRA</div>
+        </div>
+      </a>
+
+      <!-- 6 · Ananta Canggu -->
       <a class="proj reveal" href="https://pauly-ceo.github.io/ananta-canggu-assets/" target="_blank" rel="noopener">
-        <div class="proj__photo" style="background-image:url('hero04.jpg')"></div>
+        <div class="proj__photo" style="background-image:url('https://pauly-ceo.github.io/ananta-canggu-assets/render-rooftop.jpg')"></div>
         <div class="proj__body">
           <div class="proj__row">
             <div class="proj__name">Ananta Canggu</div>
-            <div class="proj__loc">Canggu · Bali</div>
+            <div class="proj__loc">Canggu · Bali · ID</div>
           </div>
           <div class="proj__meta">
-            <div class="proj__meta-it"><div class="proj__meta-k">Units</div><div class="proj__meta-v">36 apt</div></div>
-            <div class="proj__meta-it"><div class="proj__meta-k">Handover</div><div class="proj__meta-v">Q3 2028</div></div>
-            <div class="proj__meta-it"><div class="proj__meta-k">From</div><div class="proj__meta-v">$199K</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Use</div><div class="proj__meta-v">Branded residences · 36</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Handover</div><div class="proj__meta-v">Q2 2028</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">From</div><div class="proj__meta-v">$191K</div></div>
           </div>
-          <div class="proj__status is-prep"><span class="dot"></span> In preparation · 6 of 9 VIP remain</div>
+          <div class="proj__status"><span class="dot"></span> Selling now · 6 of 9 VIP</div>
+          <div class="proj__sub">Identity Designers · Built by THIERRA</div>
         </div>
       </a>
+
+      <!-- 7 · Plava Uvala Resort -->
+      <a class="proj reveal" href="https://www.myresorts.eu/cs/projekt/holiday-resort-plava-uvala-3XImFZ" target="_blank" rel="noopener">
+        <div class="proj__photo" style="background-image:url('https://www.myresorts.eu/upItems/imgs/plava_uvala_resort_2025_06_18_15_52_35_wide.jpg')"></div>
+        <div class="proj__body">
+          <div class="proj__row">
+            <div class="proj__name">Plava Uvala Resort</div>
+            <div class="proj__loc">Pag · Croatia · HR</div>
+          </div>
+          <div class="proj__meta">
+            <div class="proj__meta-it"><div class="proj__meta-k">Use</div><div class="proj__meta-v">Holiday resort · 2 km beach</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Volume</div><div class="proj__meta-v">~4 mld. Kč</div></div>
+            <div class="proj__meta-it"><div class="proj__meta-k">Start</div><div class="proj__meta-v">2027</div></div>
+          </div>
+          <div class="proj__status is-prep"><span class="dot"></span> Pre-launch</div>
+          <div class="proj__sub">Bezdikian Architects · Venice</div>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
