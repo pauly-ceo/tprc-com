@@ -261,52 +261,179 @@ a{color:inherit;text-decoration:none}
   text-transform:uppercase;color:var(--mute);margin-top:6px;line-height:1.5;
 }
 
-/* ========== MANIFESTO ========== */
-.manifesto{
-  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;
+/* ========== WHO WE ARE (dark) — 3 sub-blocks vertical stack ========== */
+.who__list{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,0.18)}
+.who__item{
+  display:grid;grid-template-columns:80px 2fr 1fr;gap:48px;
+  padding:64px 0;border-bottom:1px solid rgba(255,255,255,0.18);
+  align-items:start;
 }
-.manifesto__body p{
-  font-family:'Inter',sans-serif;font-weight:400;font-size:18px;line-height:1.65;
-  color:rgba(255,255,255,0.86);max-width:540px;
+.who__num{
+  font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;
+  letter-spacing:0.22em;color:rgba(255,255,255,0.5);
+  padding-top:14px;
 }
-.manifesto__body p + p{margin-top:18px}
-.manifesto__list{display:grid;gap:0;border-top:1px solid rgba(255,255,255,0.18)}
-.manifesto__list-it{
-  display:grid;grid-template-columns:64px 1fr;gap:24px;
-  padding:24px 0;border-bottom:1px solid rgba(255,255,255,0.18);
+.who__body h3{
+  font-family:'Inter',sans-serif;font-weight:900;
+  font-size:clamp(28px,3.4vw,46px);line-height:1.0;letter-spacing:-0.025em;
+  text-transform:uppercase;margin-bottom:24px;
 }
-.manifesto__list-n{
+.who__body p{
+  font-family:'Inter',sans-serif;font-weight:400;
+  font-size:17px;line-height:1.65;color:rgba(255,255,255,0.86);
+  max-width:620px;
+}
+.who__body p + p{margin-top:14px}
+.who__body blockquote{
+  border-left:2px solid rgba(255,255,255,0.4);
+  padding-left:24px;margin:8px 0;
+  font-family:'Inter',sans-serif;font-weight:400;font-style:italic;
+  font-size:17px;line-height:1.65;color:rgba(255,255,255,0.94);
+}
+.who__aside{
   font-family:'JetBrains Mono',monospace;font-size:11px;
-  letter-spacing:0.18em;color:rgba(255,255,255,0.55);
+  letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55);
+  padding-top:18px;
 }
-.manifesto__list-k{
-  font-family:'Inter',sans-serif;font-weight:700;font-size:18px;
-  letter-spacing:-0.01em;
+.who__aside strong{
+  display:block;color:#fff;font-family:'Inter',sans-serif;font-weight:900;
+  font-size:clamp(22px,2.4vw,32px);letter-spacing:-0.02em;text-transform:uppercase;
+  margin-bottom:8px;line-height:1;
 }
-.manifesto__list-d{
-  font-family:'Inter',sans-serif;font-weight:400;font-size:14px;
-  color:rgba(255,255,255,0.66);margin-top:6px;line-height:1.5;
+/* Architecture diagram — 4-tier SVG */
+.who__arch{
+  display:grid;gap:14px;max-width:520px;
+}
+.who__arch-tier{
+  display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:18px;
+  padding:14px 18px;border:1px solid rgba(255,255,255,0.22);
+  background:rgba(255,255,255,0.02);
+}
+.who__arch-tier .lvl{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:0.18em;color:rgba(255,255,255,0.45);
+}
+.who__arch-tier .n{
+  font-family:'Inter',sans-serif;font-weight:900;font-size:18px;
+  letter-spacing:-0.01em;text-transform:uppercase;
+}
+.who__arch-tier .a{
+  font-family:'JetBrains Mono',monospace;font-size:9px;
+  letter-spacing:0.14em;color:rgba(255,255,255,0.5);text-transform:uppercase;
+}
+.who__arch-tier.is-self{
+  border-color:#fff;background:rgba(255,255,255,0.08);
+}
+
+/* ========== WHAT WE DO (light) — 4 sub-blocks vertical stack ========== */
+.what__list{display:flex;flex-direction:column;gap:0;border-top:1px solid #0a0a0a}
+.what__item{
+  display:grid;grid-template-columns:120px 1.4fr 1fr;gap:56px;
+  padding:80px 0;border-bottom:1px solid #0a0a0a;
+  align-items:center;
+  min-height:60vh;
+}
+.what__num{
+  font-family:'Inter',sans-serif;font-weight:900;
+  font-size:clamp(60px,7vw,120px);line-height:1;letter-spacing:-0.04em;
+  color:#0a0a0a;
+}
+.what__body h3{
+  font-family:'Inter',sans-serif;font-weight:900;
+  font-size:clamp(32px,4.4vw,64px);line-height:0.96;letter-spacing:-0.03em;
+  text-transform:uppercase;margin-bottom:24px;
+}
+.what__body p{
+  font-family:'Inter',sans-serif;font-weight:400;
+  font-size:17px;line-height:1.65;color:#0a0a0a;max-width:540px;
+}
+.what__body p + p{margin-top:12px}
+.what__fact{
+  text-align:left;
+  border-left:1px solid #0a0a0a;padding-left:28px;
+}
+.what__fact .big{
+  display:block;
+  font-family:'Inter',sans-serif;font-weight:900;
+  font-size:clamp(36px,3.8vw,52px);line-height:1;letter-spacing:-0.025em;
+  margin-bottom:8px;color:#0a0a0a;
+}
+.what__fact .lbl{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--mute);
+  line-height:1.5;
+}
+
+@media (max-width:860px){
+  .who__item{grid-template-columns:1fr;gap:18px;padding:40px 0}
+  .who__num{padding-top:0;font-size:11px}
+  .who__body h3{font-size:30px}
+  .who__body p, .who__body blockquote{font-size:16px}
+  .who__body blockquote{padding-left:18px}
+  .who__aside{padding-top:0}
+  .who__arch{max-width:none}
+  .what__item{grid-template-columns:1fr;gap:18px;padding:48px 0;min-height:0}
+  .what__num{font-size:64px}
+  .what__body h3{font-size:32px}
+  .what__body p{font-size:16px}
+  .what__fact{padding-left:18px}
 }
 
 /* ========== CONTACT ========== */
 .contact{
-  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  display:grid;grid-template-columns:minmax(260px, 400px) 1fr;gap:80px;align-items:start;
 }
+/* Kristyna photo card — mirrors project card behavior (grayscale → color on hover) */
+.contact__person{
+  display:block;
+  border:1px solid #0a0a0a;
+  background:#fff;
+  overflow:hidden;
+  transition:transform 0.5s ease, box-shadow 0.5s ease;
+}
+.contact__person:hover{transform:translateY(-3px);box-shadow:0 18px 48px -24px rgba(0,0,0,0.35)}
+.contact__person-photo{
+  aspect-ratio:2/3;
+  background-size:cover;background-position:center top;
+  filter:grayscale(100%) contrast(1.06);
+  transition:filter 0.7s ease, transform 0.9s ease;
+}
+.contact__person:hover .contact__person-photo{filter:grayscale(0%) contrast(1.0);transform:scale(1.03)}
+.contact__person-body{padding:22px 24px 24px;border-top:1px solid #0a0a0a}
+.contact__person-name{
+  font-family:'Inter',sans-serif;font-weight:900;
+  font-size:22px;line-height:1.05;letter-spacing:-0.02em;text-transform:uppercase;
+}
+.contact__person-role{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:0.18em;text-transform:uppercase;color:var(--mute);margin-top:6px;
+}
+.contact__copy{display:flex;flex-direction:column;gap:24px}
 .contact__title{
   font-family:'Inter',sans-serif;font-weight:900;
   font-size:clamp(28px,3.6vw,52px);line-height:1.0;letter-spacing:-0.02em;
 }
-.contact__email{
-  display:inline-block;margin-top:24px;
-  font-family:'Inter',sans-serif;font-weight:900;
-  font-size:clamp(22px,2.4vw,34px);
-  border-bottom:2px solid #0a0a0a;padding-bottom:4px;
+.contact__lead{
+  font-family:'Inter',sans-serif;font-weight:400;font-size:16px;line-height:1.6;
+  color:#0a0a0a;max-width:540px;
 }
-.contact__col h4{
+.contact__lines{display:grid;gap:16px;margin-top:8px}
+.contact__line{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:baseline}
+.contact__line label{
   font-family:'JetBrains Mono',monospace;font-size:10px;
-  letter-spacing:0.2em;text-transform:uppercase;color:var(--mute);margin-bottom:10px;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--mute);
 }
-.contact__col p{font-size:14px;line-height:1.6;color:#0a0a0a;margin-bottom:18px}
+.contact__line a, .contact__line span{
+  font-family:'Inter',sans-serif;font-weight:700;
+  font-size:clamp(15px,1.4vw,19px);
+  border-bottom:1px solid transparent;padding-bottom:2px;
+  transition:border-color 0.3s ease;
+}
+.contact__line a:hover{border-bottom-color:#0a0a0a}
+
+@media (max-width:860px){
+  .contact{grid-template-columns:1fr;gap:36px}
+}
 
 /* ========== FOOTER ========== */
 .footer{
@@ -450,6 +577,172 @@ body.menu-open{overflow:hidden}
       <span class="status__pill"><span class="dot dot--inactive"></span> 1 operating</span>
     </div>
     <div class="status__meta">7 projects · CZ · ID · HR · ~6 bn CZK in motion</div>
+  </div>
+</section>
+
+<!-- ============ WHO WE ARE ============ -->
+<section class="section section--dark" id="who">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <div>
+        <div class="eyebrow">I. Who we are</div>
+      </div>
+      <div>
+        <h2 class="section__title">We don&rsquo;t build<br>another resort.</h2>
+        <p class="section__lead">We build a new kind of place &mdash; resorts that can be owned, lived in, and shared. A category called the <strong>Personal Resort</strong>&trade;.</p>
+      </div>
+    </div>
+
+    <div class="who__list">
+
+      <!-- 01 · Category Owner -->
+      <div class="who__item reveal">
+        <div class="who__num">01 / Category owner</div>
+        <div class="who__body">
+          <h3>We don&rsquo;t build for the market. We build the market.</h3>
+          <p>TPRC is not another developer. We are the architect of a category that did not exist before us: places that fall between a private home and a hotel, owned by their guests, run as a hospitality system, financed as institutional real estate.</p>
+          <p>The brand the guest sees is its own &mdash; Ananta, Plava Uvala, Lesn&iacute; str&aacute;n&ecirc;. TPRC stays behind, holding the structure together: development, capital, operations, reporting.</p>
+        </div>
+        <div class="who__aside">
+          <strong>Earns respect.</strong>
+          Voice of the builder &middot; vision &middot; system.
+        </div>
+      </div>
+
+      <!-- 02 · The Manifesto -->
+      <div class="who__item reveal">
+        <div class="who__num">02 / The Manifesto</div>
+        <div class="who__body">
+          <blockquote>
+            For most of history, a resort was something you visited. You arrived, you checked in, and eventually you left.
+          </blockquote>
+          <blockquote>
+            We build a new kind of place. Resorts people don&rsquo;t just stay in, but belong to. Places that can be owned, experienced, and shared. Where your investment lives in something real.
+          </blockquote>
+          <blockquote>
+            A Personal Resort is part of a growing global system connected by a simple belief: <strong>ownership should feel personal.</strong>
+          </blockquote>
+          <blockquote>
+            Our owners aren&rsquo;t distant investors watching numbers on a screen. They enjoy the resort themselves, welcome guests from around the world, and participate in the value the place creates.
+          </blockquote>
+          <blockquote>
+            Own a place in the world. Experience it personally. Share it with others. Benefit from what it becomes.
+          </blockquote>
+          <p style="margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.55)">Welcome to the world of Personal Resorts.</p>
+        </div>
+        <div class="who__aside">
+          <strong>Why we exist.</strong>
+          The belief that holds the system together.
+        </div>
+      </div>
+
+      <!-- 03 · The Architecture -->
+      <div class="who__item reveal">
+        <div class="who__num">03 / Architecture</div>
+        <div class="who__body">
+          <h3>One platform.<br>Many brands.</h3>
+          <p>TPRC is the operating layer. It sits between capital (FIPOX), community (Holiday Investors Club), and the destinations themselves (Ananta and the rest). Four layers, one machine.</p>
+        </div>
+        <div class="who__arch">
+          <div class="who__arch-tier">
+            <div class="lvl">01 · Capital</div>
+            <div class="n">FIPOX</div>
+            <div class="a">Credit &middot; equity</div>
+          </div>
+          <div class="who__arch-tier is-self">
+            <div class="lvl">02 · System</div>
+            <div class="n">TPRC&trade;</div>
+            <div class="a">Architect &middot; operator</div>
+          </div>
+          <div class="who__arch-tier">
+            <div class="lvl">03 · Community</div>
+            <div class="n">Holiday Investors Club</div>
+            <div class="a">Coming 2026</div>
+          </div>
+          <div class="who__arch-tier">
+            <div class="lvl">04 · Hospitality</div>
+            <div class="n">Ananta &middot; et al.</div>
+            <div class="a">Guest-facing brands</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE DO ============ -->
+<section class="section" id="what">
+  <div class="section__inner">
+    <div class="section__head reveal">
+      <div>
+        <div class="eyebrow">II. What we do</div>
+      </div>
+      <div>
+        <h2 class="section__title">Three promises.<br>One operating system.</h2>
+        <p class="section__lead">With us you can <strong>OWN</strong> the property, <strong>PROFIT</strong> from real yield, and <strong>EXPERIENCE</strong> world-class hospitality &mdash; all in the same place. That is what makes a resort personal.</p>
+      </div>
+    </div>
+
+    <div class="what__list">
+
+      <!-- 01 · OWN -->
+      <div class="what__item reveal">
+        <div class="what__num">01</div>
+        <div class="what__body">
+          <h3>Own</h3>
+          <p>You own a real piece of real estate, not a token, not a fund unit. Title deed, your name, transferable and inheritable. Leasehold in Bali, freehold in the EU &mdash; structured to the local law, financed alongside FIPOX equity.</p>
+          <p>Your ownership is not a story on a screen &mdash; it&rsquo;s in the register.</p>
+        </div>
+        <div class="what__fact">
+          <span class="big">Real deed.</span>
+          <span class="lbl">Title in your name &middot; CZ &middot; EU &middot; ID jurisdictions</span>
+        </div>
+      </div>
+
+      <!-- 02 · PROFIT -->
+      <div class="what__item reveal">
+        <div class="what__num">02</div>
+        <div class="what__body">
+          <h3>Profit</h3>
+          <p>Your unit runs as part of the Ananta hospitality operation. Bookings, guest service, cleaning, revenue management &mdash; we do it. You get the report and the distribution.</p>
+          <p>Net yields target 9 to 16&nbsp;% per project. Statements arrive monthly, in your language, in your currency.</p>
+        </div>
+        <div class="what__fact">
+          <span class="big">9&ndash;16&nbsp;% target IRR.</span>
+          <span class="lbl">Monthly distributions &middot; owner portal &middot; transparent reporting</span>
+        </div>
+      </div>
+
+      <!-- 03 · EXPERIENCE -->
+      <div class="what__item reveal">
+        <div class="what__num">03</div>
+        <div class="what__body">
+          <h3>Experience</h3>
+          <p>Every year, you get fourteen nights in your unit &mdash; yours, free of charge, on dates you choose. Plus the full hospitality stack: 24/7 villa manager, private chef on call, airport transfer, masseur, kids&rsquo; club, the lot.</p>
+          <p>That is the &laquo;personal&raquo; in Personal Resort. Not theoretical &mdash; in your calendar.</p>
+        </div>
+        <div class="what__fact">
+          <span class="big">14 nights / year.</span>
+          <span class="lbl">Personal villa manager &middot; private chef &middot; full hospitality service</span>
+        </div>
+      </div>
+
+      <!-- 04 · THE SYSTEM -->
+      <div class="what__item reveal">
+        <div class="what__num">04</div>
+        <div class="what__body">
+          <h3>The System</h3>
+          <p>We don&rsquo;t outsource the hard parts. Construction runs through <strong>THIERRA</strong>, a builder we control end-to-end. Capital sits with <strong>FIPOX</strong>, our own group balance sheet &mdash; not third-party LPs. Operations are run by us, on the ground, in each destination.</p>
+          <p>Skin in the game at every layer. That&rsquo;s why the numbers hold up.</p>
+        </div>
+        <div class="what__fact">
+          <span class="big">Built by THIERRA.<br>Backed by FIPOX.</span>
+          <span class="lbl">Vertically integrated &middot; in-house operations &middot; skin in the game</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -598,51 +891,6 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<!-- ============ MANIFESTO ============ -->
-<section class="section section--dark" id="method">
-  <div class="section__inner">
-    <div class="section__head reveal">
-      <div>
-        <div class="eyebrow">II. Method</div>
-      </div>
-      <div>
-        <h2 class="section__title">Quiet capability.<br>Slow craft.</h2>
-        <p class="section__lead">TPRC stays out of the picture. The brands it builds take the light.</p>
-      </div>
-    </div>
-
-    <div class="manifesto">
-      <div class="manifesto__body">
-        <p>TPRC is the architecture behind a category of personal resorts &mdash; institutional structure, operational discipline, asset-grade reporting.</p>
-        <p>The guest never sees us. The investor sees one number a month, on time, in their language.</p>
-      </div>
-      <div class="manifesto__list">
-        <div class="manifesto__list-it">
-          <div class="manifesto__list-n">01</div>
-          <div>
-            <div class="manifesto__list-k">Architect</div>
-            <div class="manifesto__list-d">We design, structure and build each resort as a brand, not a unit count.</div>
-          </div>
-        </div>
-        <div class="manifesto__list-it">
-          <div class="manifesto__list-n">02</div>
-          <div>
-            <div class="manifesto__list-k">Operator</div>
-            <div class="manifesto__list-d">Personal service standards, occupancy discipline, monthly statements.</div>
-          </div>
-        </div>
-        <div class="manifesto__list-it">
-          <div class="manifesto__list-n">03</div>
-          <div>
-            <div class="manifesto__list-k">Steward</div>
-            <div class="manifesto__list-d">Backed by FIPOX credit, built by THIERRA Construction. Skin in the game.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CONTACT ============ -->
 <section class="section" id="contact">
   <div class="section__inner">
@@ -657,17 +905,36 @@ body.menu-open{overflow:hidden}
     </div>
 
     <div class="contact">
-      <div>
-        <div class="contact__title">Email is the fastest channel.</div>
-        <a class="contact__email" href="mailto:hello@thepersonalresorts.com">hello@thepersonalresorts.com</a>
-      </div>
-      <div class="contact__col">
-        <h4>Headquarters</h4>
-        <p>The Personal Resorts&trade; Company<br>Bali · Indonesia<br>Brno · Czechia</p>
-        <h4>Built by</h4>
-        <p>THIERRA Construction</p>
-        <h4>Backed by</h4>
-        <p>FIPOX</p>
+      <!-- Person card — same hover behavior as project cards -->
+      <a class="contact__person reveal" href="mailto:kristyna.pauly@thepersonalresorts.com">
+        <div class="contact__person-photo" style="background-image:url('kristyna.jpg')"></div>
+        <div class="contact__person-body">
+          <div class="contact__person-name">Kristýna Pauly</div>
+          <div class="contact__person-role">CEO · The Personal Resorts&trade; Co.</div>
+        </div>
+      </a>
+
+      <div class="contact__copy">
+        <div class="contact__title">Speak with the<br>person in charge.</div>
+        <p class="contact__lead">Kristýna runs sales and operations end-to-end. Tell her which destination fits — mountains, Bali, Adriatic — and you'll have the deck, the price list, and a real conversation in your inbox the same day.</p>
+        <div class="contact__lines">
+          <div class="contact__line">
+            <label>Email</label>
+            <a href="mailto:kristyna.pauly@thepersonalresorts.com">kristyna.pauly@thepersonalresorts.com</a>
+          </div>
+          <div class="contact__line">
+            <label>HQ</label>
+            <span>Bali · ID &middot; Brno · CZ</span>
+          </div>
+          <div class="contact__line">
+            <label>Built by</label>
+            <span>THIERRA Construction</span>
+          </div>
+          <div class="contact__line">
+            <label>Backed by</label>
+            <span>FIPOX</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -694,10 +961,11 @@ body.menu-open{overflow:hidden}
     <button class="menu__close" id="menuClose" aria-label="Close menu">Close</button>
   </div>
   <div class="menu__list">
-    <a class="menu__item" href="#portfolio" data-close><span>I. Portfolio</span><span class="menu__item-r">2 live brands</span></a>
-    <a class="menu__item" href="#method" data-close><span>II. Method</span><span class="menu__item-r">Architect &middot; operator &middot; steward</span></a>
-    <a class="menu__item" href="https://pauly-ceo.github.io/ananta/" target="_blank" rel="noopener" data-close><span>III. Invest</span><span class="menu__item-r">Ananta umbrella &nearr;</span></a>
-    <a class="menu__item" href="#contact" data-close><span>IV. Contact</span><span class="menu__item-r">Direct line</span></a>
+    <a class="menu__item" href="#who" data-close><span>I. Who we are</span><span class="menu__item-r">Category &middot; manifesto &middot; system</span></a>
+    <a class="menu__item" href="#what" data-close><span>II. What we do</span><span class="menu__item-r">Own &middot; profit &middot; experience</span></a>
+    <a class="menu__item" href="#portfolio" data-close><span>III. Portfolio</span><span class="menu__item-r">7 brands &middot; 3 countries</span></a>
+    <a class="menu__item" href="https://pauly-ceo.github.io/ananta/" target="_blank" rel="noopener" data-close><span>IV. Invest</span><span class="menu__item-r">Ananta umbrella &nearr;</span></a>
+    <a class="menu__item" href="#contact" data-close><span>V. Contact</span><span class="menu__item-r">Direct line</span></a>
   </div>
   <div class="menu__foot">
     <div>Bali · Brno · 2026</div>
